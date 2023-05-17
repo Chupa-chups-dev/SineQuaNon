@@ -1,0 +1,114 @@
+.footer {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.inform {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    justify-content: center;
+    padding: 64px 0;
+
+    &__title {
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: 500;
+        color: rgb(209, 16, 24);
+    }
+
+    &__list {
+        li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #000000;
+
+            a {
+                font-size: 16px;
+                font-weight: 400;
+                color: #000000;
+                &:hover {
+                    color: rgb(209, 16, 24);
+                }
+            }
+        }
+    }
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #e0dfdf;
+}
+
+.down {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    gap: 2rem;
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(209, 16, 24);
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                background-color: rgb(152, 12, 18);
+            }
+        }
+    }
+
+    &__conf {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        justify-content: center;
+
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            color: #000000;
+            &:hover {
+                color: rgb(152, 12, 18);
+            }
+        }
+
+    }
+
+    &__backtop {
+        margin-left: auto;
+        width: 105px;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        p {
+            font-size: 15px;
+            font-weight: 600;
+            color: #000000;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+            transform: rotate(-180deg);
+        }
+    }
+}
