@@ -1,19 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import './scss/App.scss'
-import SideBar from "./components/NavSideBar/SideBar";
-import Home from "./components/Home/Home";
-import Footer from "./components/Footer/Footer";
 import Investment from "./pages/Investment/Investment";
+import Main from "./pages/Main/Main";
+import Contacts from "./pages/Contacts/Contacts";
 
 function App() {
   return (
-    <>
-      <SideBar/>
-      {/* <Home/>
-      <Footer/> */}
-      <Investment/>
-      </>
-    
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/Investment" element={<Investment />} />
+      <Route path="/Contacts" element={<Contacts />} />
+    </Routes>
+
   );
 }
 

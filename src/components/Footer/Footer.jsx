@@ -1,7 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import s from "./Footer.module.scss"
 
 export default function Footer() {
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      };
     return (
         <footer className={s.footer}>
             <div className={s.line}></div>
@@ -10,30 +17,30 @@ export default function Footer() {
                     <div>
                         <h3 className={s.inform__title}>ABOUT LEVEL</h3>
                         <ul className={s.inform__list}>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/">About Level</a></li>
-                            <li><a href="/">Our specialist services</a></li>
-                            <li><a href="/">Our team</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/">About Level</Link></li>
+                            <li><Link to="/">Our specialist services</Link></li>
+                            <li><Link to="/">Our team</Link></li>
                         </ul>
                     </div>
                     <div className={s.inform__industry}>
                         <h3 className={s.inform__title}>INDUSTRY FOCUS</h3>
                         <ul className={s.inform__list}>
-                            <li><a href="/">Media</a></li>
-                            <li><a href="/">Film & TV</a></li>
-                            <li><a href="/">Music</a></li>
-                            <li><a href="/">Technology</a></li>
-                            <li><a href="/">Sport</a></li>
-                            <li><a href="/">Performing arts</a></li>
-                            <li><a href="/">Crypto</a></li>
-                            <li><a href="/">Private Client</a></li>
+                            <li><Link to="/">Media</Link></li>
+                            <li><Link to="/">Film & TV</Link></li>
+                            <li><Link to="/">Music</Link></li>
+                            <li><Link to="/">Technology</Link></li>
+                            <li><Link to="/">Sport</Link></li>
+                            <li><Link to="/">Performing arts</Link></li>
+                            <li><Link to="/">Crypto</Link></li>
+                            <li><Link to="/">Private Client</Link></li>
                         </ul>
                     </div>
                     <div className={s.inform__joinus}>
                         <h3 className={s.inform__title}>JOIN US</h3>
                         <ul className={s.inform__list}>
-                            <li><a href="/">Work with us</a></li>
-                            <li><a href="/">Train with us</a></li>
+                            <li><Link to="/">Work with us</Link></li>
+                            <li><Link to="/">Train with us</Link></li>
                         </ul>
                     </div>
                     <div className={s.inform__contactus}>
@@ -44,8 +51,8 @@ export default function Footer() {
                             <li>Covent Garden</li>
                             <li>London</li>
                             <li>WC2H 9JJ</li>
-                            <li>T.<a href="tel:+44 (0)20 3865 1000">+44 (0)20 3865 1000</a></li>
-                            <li>E.<a href="mailto:">enquiries@level.law</a></li>
+                            <li>T.<Link to="tel:+44 (0)20 3865 1000">+44 (0)20 3865 1000</Link></li>
+                            <li>E.<Link to="mailto:">enquiries@level.law</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -69,13 +76,13 @@ export default function Footer() {
                         </a>
                     </div>
                     <div className={s.down__conf}>
-                        <a href="/">Terms of use</a>
-                        <a href="/">Privacy policy</a>
-                        <a href="/">Cookies</a>
-                        <a href="/">Satisfaction</a>
-                        <a href="/">Cyber security</a>
+                        <Link to="/">Terms of use</Link>
+                        <Link to="/">Privacy policy</Link>
+                        <Link to="/">Cookies</Link>
+                        <Link to="/">Satisfaction</Link>
+                        <Link to="/">Cyber security</Link>
                     </div>
-                    <button className={s.down__backtop}>
+                    <button onClick={scrollToTop} className={s.down__backtop}>
                         <svg class="w-5 h-5 xl:w-6 xl:h-6" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
                             <g>
                                 <polygon points="0 0 0 21.38 18 36 36 21.38 36 0 29.25 0 29.25 18 18 27 6.75 18 6.75 0 0 0" fill="rgb(152, 12, 18)"></polygon>

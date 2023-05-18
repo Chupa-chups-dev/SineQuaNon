@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import s from './SideBar.module.scss'
 import Logo from './../../assets/Logo1.svg'
 
@@ -25,21 +26,21 @@ export default function SideBar() {
             <div className={!open ? s.displn : s.burger__nav}>
                 <nav>
                     <ul className={s.nav}>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>Главная</a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>Инвестиции</a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>Сделки</a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>Недвижимость</a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>ГЧП</a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>Локализация бизнеса</a></li>
-                        <li className={s.nav__list}><a href="/" openServ={openServ} onClick={handleClick} className={s.nav__item}>Услгуи
+                        <li className={s.nav__list}><Link to="/" className={s.nav__item}>Главная</Link></li>
+                        <li className={s.nav__list}><Link to="/Investment" className={s.nav__item}>Инвестиции</Link></li>
+                        <li className={s.nav__list}><Link to="/" className={s.nav__item}>Сделки</Link></li>
+                        <li className={s.nav__list}><Link to="/" className={s.nav__item}>Недвижимость</Link></li>
+                        <li className={s.nav__list}><Link to="/" className={s.nav__item}>ГЧП</Link></li>
+                        <li className={s.nav__list}><Link to="/" className={s.nav__item}>Локализация бизнеса</Link></li>
+                        <li className={s.nav__list}><Link to="/" openServ={openServ} onClick={handleClick} className={s.nav__item}>Услгуи
                             <svg width="12" height="13" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z" fill="#ffffffd9" />
                             </svg>
 
-                        </a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>SQN в фокусе</a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>Команда</a></li>
-                        <li className={s.nav__list}><a href="/" className={s.nav__item}>Контакты</a></li>
+                        </Link></li>
+                        <li className={s.nav__list}><Link to="/" className={s.nav__item}>SQN в фокусе</Link></li>
+                        <li className={s.nav__list}><Link to="/" className={s.nav__item}>Команда</Link></li>
+                        <li className={s.nav__list}><Link to="/Contacts" className={s.nav__item}>Контакты</Link></li>
                         <div className={s.socialMedia}>
                             <a href="/">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -16,6 +16,10 @@ const textAnimation = {
 }
 
 export default function Home() {
+  const bottomBlockRef = React.useRef(null);
+  const scrollToBottom = () => {
+    bottomBlockRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <motion.div
       initial="hidden"
@@ -24,7 +28,7 @@ export default function Home() {
       className={s.home}
     >
       <div className={s.homeBg}></div>
-      <button className="arrow">
+      <button onClick={scrollToBottom} className="arrow">
         <svg class="w-5 h-5 xl:w-6 xl:h-6" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
           <g>
             <polygon points="0 0 0 21.38 18 36 36 21.38 36 0 29.25 0 29.25 18 18 27 6.75 18 6.75 0 0 0" fill="#ffffff"></polygon>

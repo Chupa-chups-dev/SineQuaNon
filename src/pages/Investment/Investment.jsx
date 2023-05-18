@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'
 import s from './Investment.module.scss'
 import Footer from '../../components/Footer/Footer';
+import SideBar from '../../components/NavSideBar/SideBar';
 
 export default function Investment() {
     const [isVisible, setIsVisible] = React.useState(false);
@@ -23,10 +26,26 @@ export default function Investment() {
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 0.5s ease-in-out',
     };
+    const textAnimation = {
+        hidden: {
+            y: -100,
+            opacity: 0,
+        },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: 'all 1s ease-in-out',
 
+        },
+    }
     return (
         <>
-            <div className={s.investment}>
+            <SideBar />
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.2 }}
+                className={s.investment}>
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
                     <button className="arrow">
@@ -38,13 +57,17 @@ export default function Investment() {
                     </button>
                     <div className={s.container}>
                         <div className={s.investment__title}>
-                            <h1>Инвестиции</h1>
+                            <motion.h1
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ amount: 0.2 }}
+                                variants={textAnimation}>Инвестиции</motion.h1>
                         </div>
                     </div>
                 </div>
                 <div className={s.category}>
                     <div className="container">
-                        <div className={s.category__container}>
+                        <motion.div variants={textAnimation} className={s.category__container}>
                             <div className={s.category__first}>
                                 <h4>Банковское финансирование</h4>
                                 <ul>
@@ -60,7 +83,7 @@ export default function Investment() {
                                         )}
                                     </div>
                                 </ul>
-                                <button onClick={toggleVisibility2}>{!isVisible2 ? 'More' : 'Close'}</button>
+                                <button onClick={toggleVisibility2}>{!isVisible2 ? 'Еще' : 'Скрыть'}</button>
                             </div>
                             <div className={s.category__second}>
                                 <h4>Частное размещение акций</h4>
@@ -77,16 +100,16 @@ export default function Investment() {
                                         )}
                                     </div>
                                 </ul>
-                                <button onClick={toggleVisibility}>{!isVisible ? 'More' : 'Close'}</button>
+                                <button onClick={toggleVisibility}>{!isVisible ? 'Еще' : 'Скрыть'}</button>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className={s.line}></div>
                 </div>
                 <div className={s.stages}>
                     <div className="container">
-                        <h2 className={s.stages__title}>Основные этапы сопровождения сделки</h2>
-                        <div className={s.stages__container}>
+                        <motion.h2 variants={textAnimation} className={s.stages__title}>Основные этапы сопровождения сделки</motion.h2>
+                        <motion.div variants={textAnimation} className={s.stages__container}>
                             <div className={s.stages__contNumb}>
                                 <div className={s.stages__line}></div>
                                 <div className={s.stages__number}><p>1</p></div>
@@ -117,13 +140,13 @@ export default function Investment() {
                                     <p>Получение Клиентом денежных средств</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div className={s.backToHome}>
-                    <button>Back to home</button>
+                    <Link to="/">Вернуться на главную</Link>
                 </div>
-            </div>
+            </motion.div>
             <Footer />
         </>
     )
