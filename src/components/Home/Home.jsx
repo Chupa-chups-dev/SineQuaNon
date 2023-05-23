@@ -15,8 +15,7 @@ const textAnimation = {
   }),
 }
 
-export default function Home() {
-  const bottomBlockRef = React.useRef(null);
+export default function Home({bottomBlockRef}) {
   const scrollToBottom = () => {
     bottomBlockRef.current.scrollIntoView({ behavior: 'smooth' });
   };

@@ -1,0 +1,39 @@
+.consultation {
+    padding-top: 200px;
+    margin-bottom: 100px;
+    h2 {
+        font-size: 50px;
+        font-weight: 500;
+        color: rgb(209, 16, 24);
+        margin-bottom: 70px;
+        text-align: center;
+
+        span {
+            color: black;
+        }
+    }
+
+    &__container {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 60px;
+        grid-row-gap: 60px;
+        div {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            p {
+                font-size: 24px ;
+                font-weight: 400;
+                color: rgb(0, 0, 0);
+                span {
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: rgb(209, 16, 24);
+                }
+            }
+        }
+    }
+}

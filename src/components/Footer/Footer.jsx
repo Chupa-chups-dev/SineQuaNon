@@ -15,44 +15,34 @@ export default function Footer() {
             <div className="container">
                 <div className={s.inform}>
                     <div>
-                        <h3 className={s.inform__title}>ABOUT LEVEL</h3>
+                        <h3 className={s.inform__title}>О ФИРМЕ</h3>
                         <ul className={s.inform__list}>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/">About Level</Link></li>
-                            <li><Link to="/">Our specialist services</Link></li>
-                            <li><Link to="/">Our team</Link></li>
+                            <li><Link to="/">О нашей фирме</Link></li>
                         </ul>
                     </div>
                     <div className={s.inform__industry}>
-                        <h3 className={s.inform__title}>INDUSTRY FOCUS</h3>
+                        <h3 className={s.inform__title}>БЫСТРЫЙ ПЕРЕХОД</h3>
                         <ul className={s.inform__list}>
-                            <li><Link to="/">Media</Link></li>
-                            <li><Link to="/">Film & TV</Link></li>
-                            <li><Link to="/">Music</Link></li>
-                            <li><Link to="/">Technology</Link></li>
-                            <li><Link to="/">Sport</Link></li>
-                            <li><Link to="/">Performing arts</Link></li>
-                            <li><Link to="/">Crypto</Link></li>
-                            <li><Link to="/">Private Client</Link></li>
-                        </ul>
-                    </div>
-                    <div className={s.inform__joinus}>
-                        <h3 className={s.inform__title}>JOIN US</h3>
-                        <ul className={s.inform__list}>
-                            <li><Link to="/">Work with us</Link></li>
-                            <li><Link to="/">Train with us</Link></li>
+                            <li><Link to="/">Главная</Link></li>
+                            <li><Link to="/">Инвестиции</Link></li>
+                            <li><Link to="/">Сделки</Link></li>
+                            <li><Link to="/">Недвижимость</Link></li>
+                            <li><Link to="/">ГЧП</Link></li>
+                            <li><Link to="/">Локализация бизнеса</Link></li>
+                            <li><Link to="/">Услуги</Link></li>
+                            <li><Link to="/">SQN в фокусе</Link></li>
+                            <li><Link to="/">Команда</Link></li>
+                            <li><Link to="/">Контакты</Link></li>
                         </ul>
                     </div>
                     <div className={s.inform__contactus}>
-                        <h3 className={s.inform__title}>CONTACT US</h3>
+                        <h3 className={s.inform__title}>КОНТАКТЫ</h3>
                         <ul className={s.inform__list}>
-                            <li>Level</li>
-                            <li>20-22 Shelton St</li>
-                            <li>Covent Garden</li>
-                            <li>London</li>
-                            <li>WC2H 9JJ</li>
-                            <li>T.<Link to="tel:+44 (0)20 3865 1000">+44 (0)20 3865 1000</Link></li>
-                            <li>E.<Link to="mailto:">enquiries@level.law</Link></li>
+                            <li>SINE QUA NON</li>
+                            <li>Адрес ....</li>
+                            <li>Москва / Санкт-Петербург</li>
+                            <li>T.<Link to="tel:+74997058878">+7 499 705 88 78</Link></li>
+                            <li>E.<Link to="mailto:info@sqn-law.ru">info@sqn-law.ru</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -76,11 +66,10 @@ export default function Footer() {
                         </a>
                     </div>
                     <div className={s.down__conf}>
-                        <Link to="/">Terms of use</Link>
-                        <Link to="/">Privacy policy</Link>
-                        <Link to="/">Cookies</Link>
-                        <Link to="/">Satisfaction</Link>
-                        <Link to="/">Cyber security</Link>
+                        <Link to="/PrivacyPolicy">Условия использования</Link>
+                        <Link to="/PrivacyPolicy">Политика конфиденциальности</Link>
+                        <Link to="/PrivacyPolicy">Персональные данные</Link>
+                        <Link to="/PrivacyPolicy">Отзывы и предложения</Link>
                     </div>
                     <button onClick={scrollToTop} className={s.down__backtop}>
                         <svg class="w-5 h-5 xl:w-6 xl:h-6" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">

@@ -1,0 +1,232 @@
+.projects {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    h2 {
+        font-size: 50px;
+        font-weight: 500;
+        color: rgb(209, 16, 24);
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+.map__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.place1 {
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    max-width: 42px;
+    max-height: 42px;
+
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place2 {
+    position: absolute;
+    top: 39%;
+    left: 12%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place3 {
+    position: absolute;
+    top: 21%;
+    left: 18%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place4 {
+    position: absolute;
+    top: 41%;
+    left: 18%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place5 {
+    position: absolute;
+    top: 49%;
+    left: 17%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place6 {
+    position: absolute;
+    top: 56%;
+    left: 28%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place7 {
+    position: absolute;
+    top: 52%;
+    left: 35%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place8 {
+    position: absolute;
+    top: 69%;
+    left: 34%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place9 {
+    position: absolute;
+    top: 34%;
+    left: 39%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place10 {
+    position: absolute;
+    top: 87%;
+    left: 43%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place11 {
+    position: absolute;
+    top: 79%;
+    left: 46%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place12 {
+    position: absolute;
+    top: 43%;
+    left: 69%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place13 {
+    position: absolute;
+    top: 72%;
+    left: 75%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+.place14 {
+    position: absolute;
+    top: 73%;
+    left: 38%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.place15 {
+    position: absolute;
+    top: 65%;
+    left: 87%;
+    max-width: 42px;
+    max-height: 42px;
+    &:hover .text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.text {
+    position: relative;
+    margin-left: -120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    width: 280px;
+    background-color: #fff;
+    z-index: 10;
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        padding: 20px;
+
+        span {
+            font-weight: 500;
+        }
+    }
+}
+
+.place {
+    width: 42px;
+    height: 42px;
+}
