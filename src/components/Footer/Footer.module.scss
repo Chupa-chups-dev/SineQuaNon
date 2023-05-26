@@ -1,15 +1,24 @@
 .footer {
     width: 100%;
     background-color: rgb(255, 255, 255);
+    padding-left: 50px;
+
+    @media screen and (max-width: 768px) {
+        padding-left: 0px;
+    }
 }
 
 .inform {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
     gap: 2rem;
     padding: 64px 0;
-
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 590px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
     &__title {
         margin-bottom: 16px;
         font-size: 24px;
@@ -50,12 +59,18 @@
     grid-template-rows: 1fr;
     justify-content: center;
     gap: 2rem;
-
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
     &__social {
+        
         display: flex;
         align-items: center;
         gap: 22px;
-
+        @media screen and (max-width: 768px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
         a {
             display: flex;
             justify-content: center;
@@ -79,10 +94,14 @@
 
     &__conf {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 16px;
         justify-content: center;
-
+        @media screen and (max-width: 768px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
         a {
             font-size: 12px;
             font-weight: 400;
@@ -102,6 +121,10 @@
         border: none;
         outline: none;
         cursor: pointer;
+        @media screen and (max-width: 768px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
         p {
             font-size: 15px;
             font-weight: 600;

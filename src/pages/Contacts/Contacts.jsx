@@ -5,10 +5,13 @@ import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 
 export default function Contacts() {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const bottomBlockRef = React.useRef(null);
     const scrollToBottom = () => {
         bottomBlockRef.current.scrollIntoView({ behavior: 'smooth' });
-      };
+    };
     return (
         <>
             <SideBar />
@@ -59,7 +62,7 @@ export default function Contacts() {
                     <Link to="/">Вернуться на главную</Link>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

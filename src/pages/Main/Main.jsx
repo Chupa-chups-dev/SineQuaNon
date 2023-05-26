@@ -9,6 +9,9 @@ import PublicPractice from '../../components/PublicPractice/Practice'
 
 
 export default function Main() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const bottomBlockRef = React.useRef(null);
   return (
     <>

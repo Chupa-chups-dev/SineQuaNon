@@ -2,10 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import s from './Privacy.module.scss'
 import Footer from '../../components/Footer/Footer'
+import SideBar from '../../components/NavSideBar/SideBar'
 
 export default function Privacy() {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <>
+            <SideBar />
             <div className={s.privacy}>
                 <div className="container">
                     <h2>Политика в отношении обработки персональных данных.</h2>

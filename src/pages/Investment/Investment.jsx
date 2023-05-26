@@ -6,6 +6,14 @@ import Footer from '../../components/Footer/Footer';
 import SideBar from '../../components/NavSideBar/SideBar';
 
 export default function Investment() {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    const bottomBlockRef = React.useRef(null);
+
+    const scrollToBottom = () => {
+        bottomBlockRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
     const [isVisible, setIsVisible] = React.useState(false);
     const [isVisible2, setIsVisible2] = React.useState(false);
     const toggleVisibility2 = () => {
@@ -20,11 +28,15 @@ export default function Investment() {
     };
     const itemStyle2 = {
         opacity: isVisible2 ? 1 : 0,
+        transform: isVisible2 ? 'translateY(0%)' : 'translateY(-10%)',
         transition: 'opacity 0.5s ease-in-out',
+        transition: 'all 1s ease-in-out'
     };
     const itemStyle = {
         opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0%)' : 'translateY(-10%)',
         transition: 'opacity 0.5s ease-in-out',
+        transition: 'all 1s ease-in-out'
     };
     const textAnimation = {
         hidden: {
@@ -35,7 +47,6 @@ export default function Investment() {
             y: 0,
             opacity: 1,
             transition: 'all 1s ease-in-out',
-
         },
     }
     return (
@@ -48,7 +59,7 @@ export default function Investment() {
                 className={s.investment}>
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
-                    <button className="arrow">
+                    <button onClick={scrollToBottom} className="arrow">
                         <svg class="w-5 h-5 xl:w-6 xl:h-6" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
                             <g>
                                 <polygon points="0 0 0 21.38 18 36 36 21.38 36 0 29.25 0 29.25 18 18 27 6.75 18 6.75 0 0 0" fill="#ffffff"></polygon>
@@ -65,9 +76,9 @@ export default function Investment() {
                         </div>
                     </div>
                 </div>
-                <div className={s.category}>
+                <div ref={bottomBlockRef} className={s.category}>
                     <div className="container">
-                        <motion.div variants={textAnimation} className={s.category__container}>
+                        <div className={s.category__container}>
                             <div className={s.category__first}>
                                 <h4>Банковское финансирование</h4>
                                 <ul>
@@ -82,8 +93,9 @@ export default function Investment() {
                                             </>
                                         )}
                                     </div>
+                                    <button onClick={toggleVisibility2}>{!isVisible2 ? 'Еще' : 'Скрыть'}</button>
                                 </ul>
-                                <button onClick={toggleVisibility2}>{!isVisible2 ? 'Еще' : 'Скрыть'}</button>
+                               
                             </div>
                             <div className={s.category__second}>
                                 <h4>Частное размещение акций</h4>
@@ -102,7 +114,7 @@ export default function Investment() {
                                 </ul>
                                 <button onClick={toggleVisibility}>{!isVisible ? 'Еще' : 'Скрыть'}</button>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                     <div className={s.line}></div>
                 </div>

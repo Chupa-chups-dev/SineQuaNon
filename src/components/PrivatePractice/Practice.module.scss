@@ -2,24 +2,44 @@
     background-color: black;
     padding-top: 200px;
     padding-bottom: 150px;
+    padding-left: 50px;
 
+    @media screen and (max-width: 768px) {
+        padding-top: 150px;
+        padding-left: 0px;
+        margin-bottom: 100px;
+    }
     h2 {
         font-size: 50px;
         font-weight: 500;
+        line-height: 50px;
         color: rgb(209, 16, 24);
         margin-bottom: 50px;
         text-align: center;
         text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+            font-size: 35px;
+            line-height: 35px;
+            font-weight: 500;
+        }
     }
 }
 
 .examples {
     display: flex;
     justify-content: space-between;
-
+    @media screen and (max-width: 1066px) {
+        flex-direction: column;
+    }
     &__practice {
         width: 35%;
         padding: 100px 0;
+        @media screen and (max-width: 1066px) {
+            width: 100%;
+            order: 1;
+            padding: 0;
+        }
+
         ul {
             li {
                 position: relative;
@@ -29,6 +49,10 @@
                     font-size: 20px;
                     font-weight: 400;
                     color: #ffffffd9;
+                    @media screen and (max-width: 768px) {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
                     &:hover {
                         transition: all 0.5s ease-in-out;
                         color: #fff;
@@ -51,25 +75,68 @@
 
     &__photo {
         position: relative;
+        height: 500px;
         width: 55%;
-
+        @media screen and (max-width: 1066px) {
+            width: 100%;
+            order: 2;
+        }
+        @media screen and (max-width: 545px) {
+            height: 300px;
+        }
+        @media screen and (max-width: 445px) {
+            height: 200px;
+        }
     }
 
     &__photo1 {
         position: absolute;
         top: 0;
         left: 0px;
-        width: 571px;
-        height: 321px;
+        max-width: 571px;
+        max-height: 321px;
         z-index: 3;
+        @media screen and (max-width: 768px) {
+            max-width: 471px;
+        }
+
+        @media screen and (max-width: 545px) {
+            max-width: 371px;
+        }
+        @media screen and (max-width: 450px) {
+            max-width: 271px;
+        }
+        @media screen and (max-width: 400px) {
+            max-width: 200px;
+        }
     }
 
     &__photo2 {
         position: absolute;
         top: 250px;
         left: 155px;
-        width: 460px;
-        height: 319px;
+        max-width: 460px;
+        max-height: 319px;
         z-index: 2;
+        @media screen and (max-width: 768px) {
+            max-width: 360px;
+        }
+
+        @media screen and (max-width: 545px) {
+            top: 200px;
+            max-width: 260px;
+        }
+        @media screen and (max-width: 450px) {
+            left: 125px;
+            top: 140px;
+            max-width: 230px;
+        }
+        @media screen and (max-width: 400px) {
+            left: 0;
+            top: 110px;
+            right: 0;
+            margin: 0 auto;
+            max-width: 200px;
+        }
     }
 }

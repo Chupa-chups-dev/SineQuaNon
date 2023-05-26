@@ -24,15 +24,13 @@ export default function Footer() {
                         <h3 className={s.inform__title}>БЫСТРЫЙ ПЕРЕХОД</h3>
                         <ul className={s.inform__list}>
                             <li><Link to="/">Главная</Link></li>
-                            <li><Link to="/">Инвестиции</Link></li>
-                            <li><Link to="/">Сделки</Link></li>
-                            <li><Link to="/">Недвижимость</Link></li>
-                            <li><Link to="/">ГЧП</Link></li>
-                            <li><Link to="/">Локализация бизнеса</Link></li>
-                            <li><Link to="/">Услуги</Link></li>
-                            <li><Link to="/">SQN в фокусе</Link></li>
-                            <li><Link to="/">Команда</Link></li>
-                            <li><Link to="/">Контакты</Link></li>
+                            <li><Link to="/Investment">Инвестиции</Link></li>
+                            <li><Link to="/Transactions">Сделки</Link></li>
+                            <li><Link to="/Partnership">ГЧП</Link></li>
+                            <li><Link to="/InternationalPractice">Международная практика</Link></li>
+                            <li><Link to="/SpecialAssignments">Особые поручения</Link></li>
+                            <li><Link to="/OurTeam">Команда</Link></li>
+                            <li><Link to="/Contacts">Контакты</Link></li>
                         </ul>
                     </div>
                     <div className={s.inform__contactus}>

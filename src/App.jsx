@@ -4,6 +4,11 @@ import Investment from "./pages/Investment/Investment";
 import Main from "./pages/Main/Main";
 import Contacts from "./pages/Contacts/Contacts";
 import Privacy from "./pages/PrivacyPolicy/Privacy";
+import Partnership from "./pages/PPPartnership/Partnership";
+import Team from "./pages/OurTeam/Team";
+import Transactions from "./pages/Transactions/Transactions";
+import Practice from "./pages/InternationalPractice/Practice";
+import Assignments from "./pages/SpecialAssignments/Assignments";
 
 function App() {
   return (
@@ -12,6 +17,11 @@ function App() {
       <Route path="/Investment" element={<Investment />} />
       <Route path="/Contacts" element={<Contacts />} />
       <Route path="/PrivacyPolicy" element={<Privacy />} />
+      <Route path="/Partnership" element={<Partnership />} />
+      <Route path="/OurTeam" element={<Team />} />
+      <Route path="/Transactions" element={<Transactions />} />
+      <Route path="/InternationalPractice" element={<Practice />} />
+      <Route path="/SpecialAssignments" element={<Assignments />} />
     </Routes>
 
   );

@@ -7,16 +7,27 @@
     position: fixed;
     top: 0;
     z-index: 50;
-    
+
+    @media screen and (max-width: 768px) {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
 .burger {
+    position: relative;
     width: 50px;
     height: 50px;
     border: none;
     cursor: pointer;
     background-color: transparent;
+    @media screen and (max-width: 768px) {
+        order: 2;
+    }
 }
 
 .logo {
@@ -24,6 +35,15 @@
     bottom: 115px;
     left: -75px;
     transform: rotate(-90deg);
+
+    @media screen and (max-width: 768px) {
+        position: relative;
+        transform: rotate(0deg);
+        top: 5px;
+        bottom: 0;
+        left: 15px;
+        order: 1;
+    }
 }
 
 .displn {
@@ -32,6 +52,9 @@
     top: 0;
     transform: translateX(-100%);
     transition: transform 0s ease;
+    @media screen and (max-width: 768px) {
+        transform: translateY(-100%);
+    }
 }
 
 .displn1 {
@@ -40,6 +63,9 @@
     top: 0;
     transform: translateX(-100%);
     transition: transform 0s ease;
+    @media screen and (max-width: 768px) {
+        transform: translateY(-100%);
+    }
 }
 
 .burger__nav {
@@ -52,7 +78,9 @@
     height: 100%;
     width: 430px;
     z-index: 10;
-
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
     &::-webkit-scrollbar {
         width: 5px;
         background-color: #ffffffbe;
@@ -78,15 +106,17 @@
     height: 100%;
     width: 430px;
     z-index: 9;
+
     &::-webkit-scrollbar {
         width: 5px;
         background-color: #ffffffbe;
     }
+
     &::-webkit-scrollbar-thumb {
         width: 5px;
         height: 30px;
         background-color: #000000be;
-        
+
     }
 }
 
@@ -97,7 +127,9 @@
     box-shadow: 0 0 32px 4px #00000059;
     padding: 15vh 2.5rem 20vh 6rem;
     box-sizing: border-box;
-
+    @media screen and (max-width: 768px) {
+        padding: 6rem 2rem;
+    }
     &__item {
         display: flex;
         align-items: center;
@@ -153,12 +185,14 @@
     display: flex;
     align-items: center;
     gap: 45px;
+
     a {
-        
+
         svg {
             width: 25px;
             height: 25px;
-            &:hover path{
+
+            &:hover path {
                 transition: all 0.5s ease-in-out;
                 fill: #ffffff;
             }

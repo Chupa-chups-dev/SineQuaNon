@@ -1,14 +1,30 @@
 .projects {
     margin-top: 200px;
     margin-bottom: 100px;
+    padding-left: 50px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 150px;
+        padding-left: 0px;
+        margin-bottom: 50px;
+    }
+
     h2 {
         font-size: 50px;
         font-weight: 500;
+        line-height: 50px;
         color: rgb(209, 16, 24);
         margin-bottom: 50px;
         text-align: center;
+
+        @media screen and (max-width: 768px) {
+            font-size: 35px;
+            line-height: 35px;
+            font-weight: 500;
+        }
     }
 }
+
 .map__container {
     position: relative;
     width: 100%;
@@ -31,6 +47,28 @@
         opacity: 1;
         visibility: visible;
     }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+    }
+
+    @media screen and (max-width: 490px) {
+        top: 26%;
+        left: 9%;
+    }
+
+    @media screen and (max-width: 410px) {
+        top: 25%;
+        left: 8%;
+    }
 }
 
 .place2 {
@@ -39,9 +77,22 @@
     left: 12%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
     }
 }
 
@@ -51,9 +102,22 @@
     left: 18%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
     }
 }
 
@@ -63,9 +127,22 @@
     left: 18%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
     }
 }
 
@@ -75,9 +152,37 @@
     left: 17%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+    }
+
+    @media screen and (max-width: 570px) {
+        top: 48%;
+        left: 16%;
+    }
+
+    @media screen and (max-width: 460px) {
+        top: 46%;
+        left: 16%;
+    }
+
+    @media screen and (max-width: 410px) {
+        top: 45%;
+        left: 15%;
     }
 }
 
@@ -87,9 +192,32 @@
     left: 28%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+    }
+
+    @media screen and (max-width: 490px) {
+        top: 54%;
+        left: 27%;
+    }
+
+    @media screen and (max-width: 400px) {
+        top: 52%;
+        left: 26%;
     }
 }
 
@@ -99,9 +227,27 @@
     left: 35%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+    }
+
+    @media screen and (max-width: 450px) {
+        top: 49%;
+        left: 33%;
     }
 }
 
@@ -111,9 +257,32 @@
     left: 34%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+    }
+
+    @media screen and (max-width: 490px) {
+        top: 67%;
+        left: 33%;
+    }
+
+    @media screen and (max-width: 450px) {
+        top: 63%;
+        left: 32%;
     }
 }
 
@@ -123,9 +292,32 @@
     left: 39%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+    }
+
+    @media screen and (max-width: 490px) {
+        top: 34%;
+        left: 38%;
+    }
+
+    @media screen and (max-width: 450px) {
+        top: 29%;
+        left: 38%;
     }
 }
 
@@ -135,9 +327,32 @@
     left: 43%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+    }
+
+    @media screen and (max-width: 550px) {
+        top: 83%;
+        left: 42%;
+    }
+
+    @media screen and (max-width: 450px) {
+        top: 80%;
+        left: 41%;
     }
 }
 
@@ -147,9 +362,29 @@
     left: 46%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+        top: 77%;
+        left: 45%;
+    }
+
+    @media screen and (max-width: 450px) {
+        top: 74%;
+        left: 44%;
     }
 }
 
@@ -159,9 +394,25 @@
     left: 69%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+        .text {
+            margin-left: -180px;
+        }
     }
 }
 
@@ -171,11 +422,31 @@
     left: 75%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
     }
 
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+        .text {
+            margin-left: -180px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        top: 65%;
+        left: 75%;
+    }
 }
 
 .place14 {
@@ -184,9 +455,28 @@
     left: 38%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+        
+    }
+
+    @media screen and (max-width: 550px) {
+        top: 67%;
+        left: 38%;
     }
 }
 
@@ -196,9 +486,31 @@
     left: 87%;
     max-width: 42px;
     max-height: 42px;
+
     &:hover .text {
         opacity: 1;
         visibility: visible;
+        margin-left: -180px;
+    }
+
+    img {
+        @media screen and (max-width: 768px) {
+            max-width: 22px;
+            max-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        max-width: 22px;
+        max-height: 22px;
+        .text {
+            margin-left: -180px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        top: 59%;
+        left: 85%;
     }
 }
 
@@ -214,18 +526,28 @@
     background-color: #fff;
     z-index: 10;
 
+    @media screen and (max-width: 768px) {
+        margin-left: 50%;
+        width: 150px;
+    }
+
     p {
         font-size: 15px;
         font-weight: 400;
         margin-bottom: 16px;
         padding: 20px;
 
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            font-weight: 400;
+            padding: 10px;
+        }
+
         span {
             font-weight: 500;
         }
     }
 }
-
 .place {
     width: 42px;
     height: 42px;
