@@ -27,7 +27,7 @@ export default function SideBar() {
                 <nav className={s.nav}>
                     <ul>
                         <li className={s.nav__list}><Link to="/" className={s.nav__item}>Главная</Link></li>
-                        <li className={s.nav__list}><Link to="/Investment" className={s.nav__item}>Инвестиции</Link></li>
+                        {/* <li className={s.nav__list}><Link to="/Investment" className={s.nav__item}>Инвестиции</Link></li> */}
                         <li className={s.nav__list}><Link to="/Transactions" className={s.nav__item}>Сделки</Link></li>
                         <li className={s.nav__list}><Link to="/Partnership" className={s.nav__item}>ГЧП</Link></li>
                         <li className={s.nav__list}><Link to="/InternationalPractice" className={s.nav__item}>Международная практика</Link></li>

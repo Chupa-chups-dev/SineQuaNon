@@ -14,7 +14,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/Investment" element={<Investment />} />
+      {/* <Route path="/Investment" element={<Investment />} /> */}
       <Route path="/Contacts" element={<Contacts />} />
       <Route path="/PrivacyPolicy" element={<Privacy />} />
       <Route path="/Partnership" element={<Partnership />} />

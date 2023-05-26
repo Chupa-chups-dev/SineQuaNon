@@ -1,6 +1,10 @@
 .privacy {
+    padding-left: 50px;
     margin-top: 50px;
     margin-bottom: 100px;
+    @media screen and (max-width: 768px) {
+        padding-left: 0px;
+    }
     h2 {
         font-size: 50px;
         font-weight: 500;
@@ -8,6 +12,18 @@
         color: rgb(209, 16, 24);
         margin-bottom: 50px;
         text-align: center;
+        @media screen and (max-width: 900px) {
+            font-size: 100px;
+            font-weight: 400;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 80px;
+            font-weight: 400;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 50px;
+            font-weight: 400;
+        }
     }
     p {
         font-size: 17px;
@@ -38,7 +54,10 @@
         cursor: pointer;
         background-color: rgb(209, 16, 24);
         text-transform: uppercase;
-
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+            padding: 15px 30px;
+        }
         &:hover {
             transform: translateY(1px);
             background-color: rgb(152, 12, 18);
