@@ -5,10 +5,23 @@ import s from './Partnership.module.scss'
 import Footer from '../../components/Footer/Footer';
 import SideBar from '../../components/NavSideBar/SideBar';
 
+const textAnimation = {
+    hidden: {
+        y: -100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: { delay: custom * 0.3 },
+
+    }),
+}
+
 export default function Partnership() {
     React.useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
     const bottomBlockRef = React.useRef(null);
 
     const scrollToBottom = () => {
@@ -38,24 +51,14 @@ export default function Partnership() {
         transition: 'opacity 0.5s ease-in-out',
         transition: 'all 1s ease-in-out'
     };
-    const textAnimation = {
-        hidden: {
-            y: -100,
-            opacity: 0,
-        },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: 'all 1s ease-in-out',
-        },
-    }
+
     return (
         <>
             <SideBar />
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.2 }}
+                viewport={{ amount: 0.2, once: true }}
                 className={s.investment}>
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
@@ -69,19 +72,21 @@ export default function Partnership() {
                     <div className={s.container}>
                         <div className={s.investment__title}>
                             <motion.h1
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ amount: 0.2 }}
-                                variants={textAnimation}>Государственно-частное партнерство</motion.h1>
+                                custom={1} variants={textAnimation}
+                            >Государственно-частное партнерство</motion.h1>
                         </div>
-                        <motion.p variants={textAnimation} className={s.investment__subtitle}>Основу нашей ГЧП практики составляют проекты в социальной сфере и сфере жилищно-коммунального хозяйства.</motion.p>
-                        <motion.p variants={textAnimation} className={s.investment__inf}>Городская инфраструктура + ТКО + Здравоохранение + Школы и детсады + Спортивные объекты.</motion.p>
+                        <motion.p custom={2} variants={textAnimation} className={s.investment__subtitle}>Основу нашей ГЧП практики составляют проекты в социальной сфере и сфере жилищно-коммунального хозяйства.</motion.p>
+                        <motion.p custom={3} variants={textAnimation} className={s.investment__inf}>Городская инфраструктура + ТКО + Здравоохранение + Школы и детсады + Спортивные объекты.</motion.p>
                     </div>
                 </div>
-                <div ref={bottomBlockRef} className={s.category}>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ amount: 0.2, once: true }}
+                    ref={bottomBlockRef} className={s.category}>
                     <div className="container">
                         <div className={s.category__container}>
-                            <div className={s.category__first}>
+                            <motion.div custom={1} variants={textAnimation} className={s.category__first}>
                                 <h4>Что мы делаем:</h4>
                                 <ul>
                                     <li>Разработка концепции концессионного/ГЧП проекта.</li>
@@ -100,8 +105,10 @@ export default function Partnership() {
                                     <button onClick={toggleVisibility2}>{!isVisible2 ? 'Еще' : 'Скрыть'}</button>
                                 </ul>
 
-                            </div>
-                            <div className={s.category__second}>
+                            </motion.div>
+                            <motion.div
+                                custom={1} variants={textAnimation}
+                                className={s.category__second}>
                                 <h4>А также:</h4>
                                 <ul >
                                     <li>Финансовое моделирование проекта и бюджетное планирование.</li>
@@ -116,10 +123,10 @@ export default function Partnership() {
                                     </div>
                                 </ul>
                                 <button onClick={toggleVisibility}>{!isVisible ? 'Еще' : 'Скрыть'}</button>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <div className={s.backToHome}>
                     <Link to="/">Вернуться на главную</Link>
                 </div>

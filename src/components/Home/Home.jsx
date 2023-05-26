@@ -10,7 +10,7 @@ const textAnimation = {
   visible: custom => ({
     y: 0,
     opacity: 1,
-    transition: { delay: custom * 0.6 },
+    transition: { delay: custom * 0.3 },
 
   }),
 }
@@ -23,7 +23,7 @@ export default function Home({bottomBlockRef}) {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.2 }}
+      viewport={{ amount: 0.2, once: true }}
       className={s.home}
     >
       <div className={s.homeBg}></div>

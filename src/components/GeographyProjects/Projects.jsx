@@ -1,15 +1,34 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import s from './Projects.module.scss'
 import map from './../../assets/map.png'
 import place from './../../assets/place.png'
 
 
+const textAnimation = {
+    hidden: {
+        y: -100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: { delay: custom * 0.3 },
+
+    }),
+}
+
+
 export default function Projects() {
     return (
-        <div className={s.projects}>
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+            className={s.projects}>
             <div className="container">
-                <h2>ГЕОГРАФИЯ ПРОЕКТОВ</h2>
-                <div className={s.map__container}>
+                <motion.h2 custom={1} variants={textAnimation}>ГЕОГРАФИЯ ПРОЕКТОВ</motion.h2>
+                <motion.div custom={2} variants={textAnimation} className={s.map__container}>
                     <img className={s.map} src={map} alt="" />
                     <div className={s.place1}>
                         <img className={s.place} src={place} alt="" />
@@ -17,7 +36,7 @@ export default function Projects() {
                             <p><span>Псковская область:</span> концессионный проект в сфере ТКО.</p>
                         </div>
                     </div>
-                    
+
                     <div className={s.place2}>
                         <img className={s.place} src={place} alt="" />
                         <div className={s.text}>
@@ -102,8 +121,8 @@ export default function Projects() {
                             <p><span>Сахалин:</span> Концессионные проекты в социальной сфере, ТКО.</p>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }

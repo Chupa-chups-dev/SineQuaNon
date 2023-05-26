@@ -5,34 +5,35 @@ import s from './Transactions.module.scss'
 import Footer from '../../components/Footer/Footer';
 import SideBar from '../../components/NavSideBar/SideBar';
 
+const textAnimation = {
+    hidden: {
+        y: -100,
+        opacity: 0,
+    },
+    visible: custom => ({
+        y: 0,
+        opacity: 1,
+        transition: { delay: custom * 0.3 },
+
+    }),
+}
+
 export default function Transactions() {
     React.useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
     const bottomBlockRef = React.useRef(null);
 
     const scrollToBottom = () => {
         bottomBlockRef.current.scrollIntoView({ behavior: 'smooth' });
     };
-
-    const textAnimation = {
-        hidden: {
-            y: -100,
-            opacity: 0,
-        },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: 'all 1s ease-in-out',
-        },
-    }
     return (
         <>
             <SideBar />
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.2 }}
+                viewport={{ amount: 0.2, once: true }}
                 className={s.investment}>
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
@@ -46,15 +47,13 @@ export default function Transactions() {
                     <div className={s.container}>
                         <div className={s.investment__title}>
                             <motion.h1
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ amount: 0.2 }}
-                                variants={textAnimation}>Сделки</motion.h1>
+                                custom={1} variants={textAnimation}
+                            >Сделки</motion.h1>
                         </div>
                     </div>
                 </div>
                 <div ref={bottomBlockRef} className={s.category}>
-                    
+
                 </div>
                 <div className={s.backToHome}>
                     <Link to="/">Вернуться на главную</Link>
