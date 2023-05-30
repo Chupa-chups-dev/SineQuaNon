@@ -9,12 +9,14 @@ import Team from "./pages/OurTeam/Team";
 import Transactions from "./pages/Transactions/Transactions";
 import Practice from "./pages/InternationalPractice/Practice";
 import Assignments from "./pages/SpecialAssignments/Assignments";
+import CorporatePractice from "./pages/CorporatePractice/CorporatePractice";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
       {/* <Route path="/Investment" element={<Investment />} /> */}
+      <Route path="/CorporatePractice" element={<CorporatePractice />} />
       <Route path="/Contacts" element={<Contacts />} />
       <Route path="/PrivacyPolicy" element={<Privacy />} />
       <Route path="/Partnership" element={<Partnership />} />

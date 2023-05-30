@@ -36,7 +36,7 @@ export default function Footer() {
                     <div className={s.inform__contactus}>
                         <h3 className={s.inform__title}>КОНТАКТЫ</h3>
                         <ul className={s.inform__list}>
-                            <li>SINE QUA NON</li>
+                            <li className={s.logo}><a href="/"><span className={s.logo}>SINE QUA NON</span></a></li>
                             <li>Адрес ....</li>
                             <li>Москва / Санкт-Петербург</li>
                             <li>T.<Link to="tel:+74997058878">+7 499 705 88 78</Link></li>

@@ -137,3 +137,15 @@
         }
     }
 }
+
+.logo {
+    font-family: 'Prompt', sans-serif;
+    width: 36px;
+    line-height: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        color: rgb(209, 16, 24);
+    }
+}

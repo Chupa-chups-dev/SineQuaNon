@@ -18,8 +18,7 @@ export default function SideBar() {
                     <div className={(open ? 'transform2 line2' : 'line2')} />
                     <div className={(open ? 'transform3 line3' : 'line3')} />
                 </button>
-                <div className={s.logo}>
-                    <img src={Logo} alt="" />
+                <div className={s.logo}>SINE QUA NON
                 </div>
 
             </div>
@@ -28,6 +27,7 @@ export default function SideBar() {
                     <ul>
                         <li className={s.nav__list}><Link to="/" className={s.nav__item}>Главная</Link></li>
                         {/* <li className={s.nav__list}><Link to="/Investment" className={s.nav__item}>Инвестиции</Link></li> */}
+                        <li className={s.nav__list}><Link to="/CorporatePractice" className={s.nav__item}>Корпоративная Практика</Link></li>
                         <li className={s.nav__list}><Link to="/Transactions" className={s.nav__item}>Сделки</Link></li>
                         <li className={s.nav__list}><Link to="/Partnership" className={s.nav__item}>ГЧП</Link></li>
                         <li className={s.nav__list}><Link to="/InternationalPractice" className={s.nav__item}>Международная практика</Link></li>
