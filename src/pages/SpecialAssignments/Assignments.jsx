@@ -52,8 +52,15 @@ export default function Assignments() {
                         </div>
                     </div>
                 </div>
-                <div ref={bottomBlockRef} className={s.category}>
-
+                <div ref={bottomBlockRef} className='container'>
+                    <h3 className={s.information}><span>Особые поручения</span> – персональные решения для наших клиентов по личным, семейным, узкопрофильным вопросам. Доверительно, конфиденциально и профессионально.</h3>
+                    <p className={s.content__title}>Примеры особых поручений:</p>
+                    <ul className={s.content}>
+                        <li>Брачные договоры и раздел активов супругов;</li>
+                        <li>Представительство в рамках административных и уголовных дел, включая срочные вызовы;</li>
+                        <li>Открытие счетов в иностранных банках, консультирование по вопросам ведения счетов;</li>
+                        <li>Приобретение активов в зарубежных юрисдикциях.</li>
+                    </ul>
                 </div>
                 <div className={s.backToHome}>
                     <Link to="/">Вернуться на главную</Link>

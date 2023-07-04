@@ -9,34 +9,46 @@
     padding-left: 50px;
     position: relative;
     width: 100%;
+
     @media screen and (max-width: 768px) {
         padding-left: 0px;
     }
+
     &__title {
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+
         h1 {
-            font-size: 100px;
+            font-size: 75px;
             font-weight: 400;
             color: #fff;
             text-align: center;
             text-transform: uppercase;
+            @media screen and (max-width: 900px) {
+                font-size: 65px;
+                font-weight: 400;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 55px;
+                font-weight: 400;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 35px;
+                font-weight: 400;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 30px;
+                font-weight: 400;
+            }
         }
-        @media screen and (max-width: 900px) {
-            font-size: 80px;
-            font-weight: 400;
-        }
-        @media screen and (max-width: 768px) {
-            font-size: 75px;
-            font-weight: 400;
-        }
-        @media screen and (max-width: 500px) {
-            font-size: 50px;
-            font-weight: 400;
-        }
+
+       
     }
 
     &__container {
@@ -68,7 +80,7 @@
         padding-bottom: 75px;
         gap: 40px;
     }
-   
+
 }
 
 .backToHome {
@@ -78,6 +90,7 @@
     width: 100%;
     height: 80px;
     background-color: #000000;
+
     a {
         font-size: 16px;
         font-weight: 400;
@@ -91,10 +104,12 @@
         cursor: pointer;
         background-color: rgb(209, 16, 24);
         text-transform: uppercase;
+
         @media screen and (max-width: 768px) {
             font-size: 13px;
             padding: 15px 30px;
         }
+
         &:hover {
             transform: translateY(1px);
             background-color: rgb(152, 12, 18);
@@ -103,3 +118,186 @@
 }
 
 
+.information__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 16px;
+    text-align: center;
+    padding-top: 100px;
+
+    span {
+        color: #d11018;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.information__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 16px;
+    text-align: center;
+    padding-top: 100px;
+
+    span {
+        color: #d11018;
+        font-weight: 500;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding: 30px 0;
+    @media screen and (max-width: 768px) {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.country {
+
+
+    background: #d11018;
+    cursor: pointer;
+    transition: max-height 0.4s ease;
+    max-height: 100px;
+
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 30px 0;
+        color: #fff;
+        text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+            font-weight: 400;
+            padding: 20px 0;
+
+        }
+    }
+
+    &:hover {
+        transform: translateY(2px);
+        transition: transform 0.6s ease;
+
+    }
+}
+
+.expanded {
+    max-height: 1000px;
+    /* Максимальная высота при открытии */
+}
+
+.contentWrapper {
+    opacity: 0;
+
+}
+
+.expanded .contentWrapper {
+    opacity: 1;
+    transition-delay: 0.2s;
+    padding: 0px 30px;
+    /* Задержка анимации для плавного появления текста */
+}
+
+.content {
+    height: 0;
+    transition: height 0.2s ease;
+    padding-bottom: 20px;
+
+    &__info {
+        font-size: 20px;
+        font-weight: 400;
+        padding: 30px 0;
+        color: #fff;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            font-weight: 400;
+            padding: 20px 0;
+
+        }
+    }
+
+    &__localizationName {
+        font-size: 18px;
+        font-weight: 400;
+        color: #fff;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+            font-weight: 400;
+
+        }
+    }
+
+    &__localization {
+        position: relative;
+        font-size: 15px;
+        font-weight: 400;
+        color: #fff;
+        padding: 10px 0;
+        padding-left: 15px;
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+            font-weight: 400;
+
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 7px;
+            height: 7px;
+            top: 14px;
+            left: -3px;
+            border-radius: 100%;
+            background-color: #000000;
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        background-color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        color: #d11018;
+        padding: 10px 0;
+        cursor: pointer;
+        &:hover {
+            transform: translateY(2px);
+            transition: transform 0.6s ease;
+    
+        }
+    }
+
+}
+
+.expanded .content {
+    height: auto;
+    transition-delay: 0.2s;
+    /* Задержка анимации для плавного появления текста */
+}
+
+.buttonOff {
+    display: none;
+}
+
+.buttonOn {
+    display: flex;
+}
