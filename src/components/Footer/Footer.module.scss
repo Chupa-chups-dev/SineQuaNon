@@ -1,3 +1,5 @@
+$red: #891515;
+
 .footer {
     width: 100%;
     background-color: rgb(255, 255, 255);
@@ -10,22 +12,30 @@
 
 .inform {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 64px 0;
+
     @media screen and (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
     }
+
     @media screen and (max-width: 590px) {
         grid-template-columns: repeat(1, 1fr);
     }
+
     &__title {
         margin-bottom: 16px;
         font-size: 24px;
         font-weight: 500;
-        color: rgb(209, 16, 24);
+        color: $red;
     }
-
+    &__industry {
+        margin-right: auto;
+    }
+    &__contactus {
+        margin-left: auto;
+    }
     &__list {
         li {
             margin-bottom: 10px;
@@ -37,20 +47,16 @@
                 font-size: 16px;
                 font-weight: 400;
                 color: #000000;
+
                 &:hover {
                     transition: all 0.3s ease-in-out;
-                    color: rgb(209, 16, 24);
+                    color: $red;
                 }
             }
         }
     }
 }
 
-.line {
-    height: 1px;
-    width: 100%;
-    background-color: #e0dfdf;
-}
 
 .down {
     padding: 40px 0;
@@ -59,18 +65,22 @@
     grid-template-rows: 1fr;
     justify-content: center;
     gap: 2rem;
+
     @media screen and (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
     }
+
     &__social {
-        
+
         display: flex;
         align-items: center;
         gap: 22px;
+
         @media screen and (max-width: 768px) {
             margin-left: auto;
             margin-right: auto;
         }
+
         a {
             display: flex;
             justify-content: center;
@@ -78,7 +88,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgb(209, 16, 24);
+            background-color: $red;
 
             svg {
                 width: 20px;
@@ -87,7 +97,7 @@
 
             &:hover {
                 transition: all 0.3s ease-in-out;
-                background-color: rgb(152, 12, 18);
+                background-color: $red;
             }
         }
     }
@@ -98,17 +108,20 @@
         align-items: center;
         gap: 16px;
         justify-content: center;
+
         @media screen and (max-width: 768px) {
             margin-left: auto;
             margin-right: auto;
         }
+
         a {
             font-size: 12px;
             font-weight: 400;
             color: #000000;
+
             &:hover {
                 transition: all 0.3s ease-in-out;
-                color: rgb(152, 12, 18);
+                color: $red;
             }
         }
 
@@ -121,19 +134,22 @@
         border: none;
         outline: none;
         cursor: pointer;
+        
         @media screen and (max-width: 768px) {
             margin-left: auto;
             margin-right: auto;
         }
+
         p {
+            text-transform: uppercase;
             font-size: 15px;
             font-weight: 600;
             color: #000000;
         }
+
         svg {
             width: 24px;
             height: 24px;
-            transform: rotate(-180deg);
         }
     }
 }
@@ -144,8 +160,9 @@
     line-height: 16px;
     font-size: 20px;
     font-weight: 500;
+
     &:hover {
         transition: all 0.3s ease-in-out;
-        color: rgb(209, 16, 24);
+        color: $red;
     }
 }

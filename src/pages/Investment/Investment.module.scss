@@ -1,3 +1,5 @@
+$red: #891515;
+
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -16,6 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         h1 {
             font-size: 135px;
             font-weight: 400;
@@ -62,7 +65,7 @@
         h4 {
             font-size: 24px;
             font-weight: 500;
-            color: rgb(209, 16, 24);
+            color: $red;
             margin-bottom: 16px;
         }
 
@@ -83,11 +86,12 @@
                     height: 5px;
                     top: 7px;
                     left: -12px;
-                    background-color: rgb(209, 16, 24);
+                    background-color: $red;
                     border-radius: 50%;
                 }
             }
         }
+
         button {
             margin-top: 44px;
             font-size: 16px;
@@ -100,11 +104,12 @@
             outline: none;
             border: none;
             cursor: pointer;
-            background-color: rgb(209, 16, 24);
+            background-color: $red;
             text-transform: uppercase;
+
             &:hover {
                 transform: translateY(1px);
-                background-color: rgb(152, 12, 18);
+                background-color: $red;
             }
         }
     }
@@ -117,7 +122,7 @@
         h4 {
             font-size: 24px;
             font-weight: 500;
-            color: rgb(209, 16, 24);
+            color: $red;
             margin-bottom: 16px;
         }
 
@@ -138,7 +143,7 @@
                     height: 5px;
                     top: 7px;
                     left: -12px;
-                    background-color: rgb(209, 16, 24);
+                    background-color: $red;
                     border-radius: 50%;
                 }
             }
@@ -156,11 +161,12 @@
             outline: none;
             border: none;
             cursor: pointer;
-            background-color: rgb(209, 16, 24);
+            background-color: $red;
             text-transform: uppercase;
+
             &:hover {
                 transform: translateY(1px);
-                background-color: rgb(152, 12, 18);
+                background-color: $red;
             }
         }
     }
@@ -173,9 +179,11 @@
     width: 100%;
     height: 100%;
     padding-bottom: 100px;
+
     &__contNumb {
         position: relative;
     }
+
     &__title {
         padding-top: 50px;
         padding-bottom: 100px;
@@ -183,12 +191,14 @@
         font-weight: 400px;
         text-align: center;
         text-transform: uppercase;
-        color: rgb(209, 16, 24);
+        color: $red;
     }
+
     &__container {
         display: flex;
         gap: 25px;
     }
+
     &__number {
         display: flex;
         align-items: center;
@@ -196,14 +206,16 @@
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        background-color:  rgb(209, 16, 24);
+        background-color: $red;
         margin-bottom: 30px;
+
         p {
             font-size: 20px;
             font-weight: 400px;
             color: #fff;
         }
     }
+
     &__line {
         position: absolute;
         content: '';
@@ -211,18 +223,21 @@
         height: 344px;
         top: 0;
         left: 50%;
-        background-color:  rgb(209, 16, 24);
+        background-color: $red;
         opacity: 0.5;
         z-index: -1;
     }
+
     &__contStages {
         div {
             margin-bottom: 32px;
+
             h6 {
                 font-size: 22px;
                 font-weight: 400px;
-                color: rgb(209, 16, 24);
+                color: $red;
             }
+
             p {
                 font-size: 14px;
                 font-weight: 400px;
@@ -239,6 +254,7 @@
     width: 100%;
     height: 80px;
     background-color: #000000;
+
     a {
         font-size: 16px;
         font-weight: 400;
@@ -250,13 +266,12 @@
         outline: none;
         border: none;
         cursor: pointer;
-        background-color: rgb(209, 16, 24);
+        background-color: $red;
         text-transform: uppercase;
+
         &:hover {
             transform: translateY(1px);
-            background-color: rgb(152, 12, 18);
+            background-color: $red;
         }
     }
 }
-
-

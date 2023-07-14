@@ -27,23 +27,23 @@ export default function Consultation({ bottomBlockRef }) {
             viewport={{ amount: 0.2, once: true }}
             ref={bottomBlockRef} className={s.consultation}>
             <div className="container">
-                <motion.h2 custom={1} variants={textAnimation}>КОНСУЛЬТАЦИЯ: <span>СТРАТЕГИЯ И ТАКТИКА</span></motion.h2>
+                <motion.h2 custom={1} variants={textAnimation}>КОНСУЛЬТАЦИЯ: СТРАТЕГИЯ И ТАКТИКА</motion.h2>
                 <motion.div custom={2} variants={textAnimation} className={s.consultation__container}>
                     <div>
                         <img src={Svg1} alt="" />
-                        <p><span>Выработка общей стратегии:</span> собираем все факторы и находим для вас решение задачи.</p>
+                        <p>Выработка общей стратегии: собираем все факторы и находим для вас решение задачи.</p>
                     </div>
                     <div>
                         <img src={Svg3} alt="" />
-                        <p><span>Ваши цели</span> - наша оценка рисков и поиск вариантов их достижения.</p>
+                        <p>Ваши цели - наша оценка рисков и поиск вариантов их достижения.</p>
                     </div>
                     <div>
                         <img src={Svg2} alt="" />
-                        <p><span>Переговоры:</span> фокус на результативности, краткосрочных и долгосрочных эффектах.</p>
+                        <p>Переговоры: фокус на результативности, краткосрочных и долгосрочных эффектах.</p>
                     </div>
                     <div>
                         <img src={Svg4} alt="" />
-                        <p><span>Тактика:</span> обращаем внимание на детали и создаем свободу для вашего маневра в сложных ситуациях.</p>
+                        <p>Тактика: обращаем внимание на детали и создаем свободу для вашего маневра в сложных ситуациях.</p>
                     </div>
                 </motion.div>
             </div>

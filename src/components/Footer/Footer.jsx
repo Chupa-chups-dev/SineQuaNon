@@ -5,21 +5,20 @@ import s from "./Footer.module.scss"
 export default function Footer() {
     const scrollToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
+            top: 0,
+            behavior: 'smooth',
         });
-      };
+    };
     return (
         <footer className={s.footer}>
-            <div className={s.line}></div>
             <div className="container">
                 <div className={s.inform}>
-                    <div>
+                    {/* <div>
                         <h3 className={s.inform__title}>О ФИРМЕ</h3>
                         <ul className={s.inform__list}>
                             <li><Link to="/">О нашей фирме</Link></li>
                         </ul>
-                    </div>
+                    </div> */}
                     <div className={s.inform__industry}>
                         <h3 className={s.inform__title}>БЫСТРЫЙ ПЕРЕХОД</h3>
                         <ul className={s.inform__list}>
@@ -66,16 +65,12 @@ export default function Footer() {
                     <div className={s.down__conf}>
                         <Link to="/PrivacyPolicy">Условия использования</Link>
                         <Link to="/PrivacyPolicy">Политика конфиденциальности</Link>
-                        <Link to="/PrivacyPolicy">Персональные данные</Link>
-                        <Link to="/PrivacyPolicy">Отзывы и предложения</Link>
                     </div>
                     <button onClick={scrollToTop} className={s.down__backtop}>
-                        <svg class="w-5 h-5 xl:w-6 xl:h-6" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-                            <g>
-                                <polygon points="0 0 0 21.38 18 36 36 21.38 36 0 29.25 0 29.25 18 18 27 6.75 18 6.75 0 0 0" fill="rgb(152, 12, 18)"></polygon>
-                            </g>
+                        <svg width="36" height="36" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 7L7 1L1 7" stroke="#891515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <p>BACK TO TOP</p>
+                        <p>Наверх</p>
                     </button>
                 </div>
             </div>

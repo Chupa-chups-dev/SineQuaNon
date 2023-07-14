@@ -1,21 +1,21 @@
+$red: #891515;
+
 .projects {
-    margin-top: 200px;
-    margin-bottom: 100px;
-    padding-left: 50px;
+
+
+    padding: 80px 80px 80px 130px;
+    background-color: black;
 
     @media screen and (max-width: 768px) {
-        margin-top: 150px;
         padding-left: 0px;
-        margin-bottom: 50px;
     }
 
     h2 {
-        font-size: 50px;
-        font-weight: 500;
-        line-height: 50px;
-        color: rgb(209, 16, 24);
-        margin-bottom: 50px;
-        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 40px;
+        color: white;
+        text-transform: uppercase;
 
         @media screen and (max-width: 768px) {
             font-size: 35px;
@@ -410,6 +410,7 @@
     @media screen and (max-width: 768px) {
         max-width: 22px;
         max-height: 22px;
+
         .text {
             margin-left: -180px;
         }
@@ -438,6 +439,7 @@
     @media screen and (max-width: 768px) {
         max-width: 22px;
         max-height: 22px;
+
         .text {
             margin-left: -180px;
         }
@@ -471,7 +473,7 @@
     @media screen and (max-width: 768px) {
         max-width: 22px;
         max-height: 22px;
-        
+
     }
 
     @media screen and (max-width: 550px) {
@@ -503,6 +505,7 @@
     @media screen and (max-width: 768px) {
         max-width: 22px;
         max-height: 22px;
+
         .text {
             margin-left: -180px;
         }
@@ -548,6 +551,7 @@
         }
     }
 }
+
 .place {
     width: 42px;
     height: 42px;

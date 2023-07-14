@@ -19,6 +19,15 @@ const textAnimation = {
 }
 
 export default function Assignments() {
+    const [isHovered, setIsHovered] = React.useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -38,10 +47,26 @@ export default function Assignments() {
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
                     <button onClick={scrollToBottom} className="arrow">
-                        <svg class="w-5 h-5 xl:w-6 xl:h-6" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-                            <g>
-                                <polygon points="0 0 0 21.38 18 36 36 21.38 36 0 29.25 0 29.25 18 18 27 6.75 18 6.75 0 0 0" fill="#ffffff"></polygon>
-                            </g>
+                        <svg
+                            width="36"
+                            height="36"
+                            viewBox="0 0 14 8"
+                            xmlns="http://www.w3.org/2000/svg"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <path
+                                d="M1 1L7 7L13 1"
+                                stroke="white"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                style={{
+                                    transition: 'stroke 0.3s ease',
+                                    stroke: isHovered ? '#891515' : 'white',
+                                }}
+                            />
                         </svg>
                     </button>
                     <div className={s.container}>
@@ -52,15 +77,24 @@ export default function Assignments() {
                         </div>
                     </div>
                 </div>
-                <div ref={bottomBlockRef} className='container'>
-                    <h3 className={s.information}><span>Особые поручения</span> – персональные решения для наших клиентов по личным, семейным, узкопрофильным вопросам. Доверительно, конфиденциально и профессионально.</h3>
-                    <p className={s.content__title}>Примеры особых поручений:</p>
-                    <ul className={s.content}>
-                        <li>Брачные договоры и раздел активов супругов;</li>
-                        <li>Представительство в рамках административных и уголовных дел, включая срочные вызовы;</li>
-                        <li>Открытие счетов в иностранных банках, консультирование по вопросам ведения счетов;</li>
-                        <li>Приобретение активов в зарубежных юрисдикциях.</li>
-                    </ul>
+                <div ref={bottomBlockRef}>
+                    <div className={s.information}>
+                        <div className='container'>
+                            <h3><span>Особые поручения</span> – персональные решения для наших клиентов по личным, семейным, узкопрофильным вопросам. Доверительно, конфиденциально и профессионально.</h3>
+                        </div>
+                    </div>
+                    <div className={s.content}>
+                        <div className="container">
+                            <p className={s.content__title}>Примеры особых поручений:</p>
+                            <ul>
+                                <li>Брачные договоры и раздел активов супругов;</li>
+                                <li>Представительство в рамках административных и уголовных дел, включая срочные вызовы;</li>
+                                <li>Медиация непубличных конфликтов;</li>
+                                <li>Открытие счетов в иностранных банках, консультирование по вопросам ведения счетов;</li>
+                                <li>Приобретение активов в зарубежных юрисдикциях.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div className={s.backToHome}>
                     <Link to="/">Вернуться на главную</Link>

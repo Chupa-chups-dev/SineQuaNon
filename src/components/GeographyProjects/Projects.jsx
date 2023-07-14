@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import s from './Projects.module.scss'
 import map from './../../assets/map.png'
-import place from './../../assets/place.png'
+import place from './../../assets/place.svg'
 
 
 const textAnimation = {

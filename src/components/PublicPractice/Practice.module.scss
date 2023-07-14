@@ -1,28 +1,24 @@
+$red: #891515;
+
 .line {
     width: 100%;
     height: 1px;
-    background-color: #e0dfdf;
+    background-color: #000000;
 }
 
 .practice {
-    background-color: rgb(255, 255, 255);
-    padding-top: 200px;
-    padding-bottom: 150px;
-    padding-left: 50px;
-
+    background-color: rgb(15, 16, 17);
+    padding: 80px 80px 80px 130px;
     @media screen and (max-width: 768px) {
-        padding-top: 150px;
         padding-left: 0px;
-        margin-bottom: 100px;
     }
 
     h2 {
-        font-size: 50px;
-        font-weight: 500;
-        line-height: 50px;
-        color: rgb(209, 16, 24);
-        margin-bottom: 50px;
-        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 40px;
+        color: white;
+        margin-bottom: 80px;
         text-transform: uppercase;
 
         @media screen and (max-width: 768px) {
@@ -43,7 +39,7 @@
 
     &__practice {
         width: 35%;
-        padding: 100px 0;
+        padding: 50px 0;
 
         @media screen and (max-width: 1066px) {
             width: 100%;
@@ -55,32 +51,40 @@
             li {
                 position: relative;
                 margin-left: 15px;
-                margin-bottom: 50px;
-
-                a {
-                    font-size: 20px;
+                margin-bottom: 32px;
+                display: flex;
+                align-items: center;
+                padding: 32px;
+                background-color: rgba(161, 161, 170, 0.2);
+                transition: box-shadow 0.6s ease, transform 0.6s ease;
+                p {
+                   
+                    font-size: 16px;
+                    line-height: 30px;
                     font-weight: 400;
-                    color: #000000d9;
-
-                    @media screen and (max-width: 768px) {
-                        font-size: 16px;
-                        font-weight: 400;
-                    }
-
-                    &:hover {
-                        transition: all 0.5s ease-in-out;
-                        color: rgb(152, 12, 18);
-                    }
+                    color: #fff;
+                    
+        
+                    // @media screen and (max-width: 768px) {
+                    //     font-size: 18px;
+                    //     font-weight: 400;
+                    // }
+        
+                    
                 }
-
+                &:hover {
+                    box-shadow: 0 20px 70px -10px #08285566;
+                    transform: translateY(-16px);
+                    transition: box-shadow 0.6s ease, transform 0.6s ease;
+                }
                 &::after {
                     position: absolute;
                     content: '';
-                    width: 5px;
-                    height: 5px;
-                    top: 7px;
-                    left: -12px;
-                    background-color: rgb(209, 16, 24);
+                    width: 7px;
+                    height: 7px;
+                    top: 42px;
+                    left: 20px;
+                    background-color: white;
                     border-radius: 50%;
                 }
 
@@ -113,7 +117,7 @@
         max-width: 571px;
         max-height: 321px;
         z-index: 3;
-
+        box-shadow: 0 20px 70px -10px #08285566;
         @media screen and (max-width: 768px) {
             max-width: 471px;
         }
@@ -136,7 +140,7 @@
         max-width: 460px;
         max-height: 319px;
         z-index: 2;
-
+        box-shadow: 0 20px 70px -10px #08285566;
         @media screen and (max-width: 768px) {
             max-width: 360px;
         }

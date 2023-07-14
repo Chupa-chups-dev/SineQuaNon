@@ -32,10 +32,10 @@ export default function Practice() {
                     </motion.div>
                     <motion.div custom={3} variants={textAnimation} className={s.examples__practice}>
                         <ul>
-                            <li><a href='/'>Финансовые и корпоративные сделки</a></li>
-                            <li><a href='/'>Коммерческая практика</a></li>
-                            <li><a href='/'>Недвижимость и строительство</a></li>
-                            <li><a href='/'>Особые задачи для частных клиентов</a></li>
+                            <li><p>Финансовые и корпоративные сделки</p></li>
+                            <li><p>Коммерческая практика</p></li>
+                            <li><p>Недвижимость и строительство</p></li>
+                            <li><p>Особые задачи для частных клиентов</p></li>
                         </ul>
                     </motion.div>
 

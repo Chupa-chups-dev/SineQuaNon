@@ -26,7 +26,7 @@ export default function Practice() {
                 viewport={{ amount: 0.2, once: true }}
                 className={s.practice}>
                 <div className="container">
-                    <motion.h2 custom={1} variants={textAnimation}>Private Practice</motion.h2>
+                    <motion.h2 custom={1} variants={textAnimation}>Public Practice</motion.h2>
                     <div className={s.examples}>
                         <motion.div custom={2} variants={textAnimation} className={s.examples__photo}>
                             <img className={s.examples__photo1} src={Private} alt="" />
@@ -34,15 +34,16 @@ export default function Practice() {
                         </motion.div>
                         <motion.div custom={3} variants={textAnimation} className={s.examples__practice}>
                             <ul>
-                                <li><a href='/'>Государственно-частное партнерство</a></li>
-                                <li><a href='/'>Консультирование государственного сектора</a></li>
-                                <li><a href='/'>Структурирование и сопровождение инвестиционных проектов</a></li>
+                                <li><p>Государственно-частное партнерство</p></li>
+                                <li><p>Консультирование государственного сектора</p></li>
+                                <li><p>Структурирование и сопровождение инвестиционных проектов</p></li>
                             </ul>
                         </motion.div>
 
                     </div>
                 </div>
             </motion.div>
+            <div className={s.line}></div>
         </>
     )
 }

@@ -1,5 +1,8 @@
+$red: #891515;
+
+
 .SideBar {
-    background: #d11018;
+    background: $red;
     box-shadow: 0 0 32px 4px #00000026;
     height: 100%;
     width: 50px;
@@ -82,7 +85,7 @@
     top: 0;
     transform: translateX(0%);
     transition: transform 1s ease;
-    background: #d11018;
+    background: $red;
     height: 100%;
     width: 430px;
     z-index: 10;
