@@ -25,29 +25,21 @@ $red: #891515;
 
         h1 {
             font-size: 75px;
-            font-weight: 400;
-            color: #fff;
+            font-weight: 700;
+            color: $red;
             text-align: center;
             text-transform: uppercase;
 
             @media screen and (max-width: 900px) {
                 font-size: 65px;
-                font-weight: 400;
             }
 
             @media screen and (max-width: 768px) {
                 font-size: 55px;
-                font-weight: 400;
             }
 
             @media screen and (max-width: 500px) {
                 font-size: 35px;
-                font-weight: 400;
-            }
-
-            @media screen and (max-width: 400px) {
-                font-size: 30px;
-                font-weight: 400;
             }
         }
     }
@@ -66,6 +58,10 @@ $red: #891515;
     width: 100%;
     height: 100vh;
     background-color: black;
+    background-image: url(../../assets/Corporate_PracticeBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     z-index: -1;
 }
 
@@ -80,6 +76,11 @@ $red: #891515;
     background-color: rgb(244, 244, 245);
     padding-top: 96px;
     padding-bottom: 96px;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 48px;
+        padding-bottom: 58px;
+    }
 
     a {
         position: relative;
@@ -112,8 +113,7 @@ $red: #891515;
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 13px;
-            padding: 15px 30px;
+            font-size: 18px;
         }
     }
 }
@@ -122,17 +122,29 @@ $red: #891515;
 .description1 {
     padding: 80px;
 
+    @media screen and (max-width: 1170px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
+
     h5 {
-        font-size: 26px;
+        font-size: 24px;
+        line-height: 35px;
         font-weight: 500;
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
 
-        // @media screen and (max-width: 768px) {
-        //     font-size: 35px;
-        //     line-height: 35px;
-        //     font-weight: 500;
-        // }
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            line-height: 20px;
+        }
     }
 
     p {
@@ -143,7 +155,6 @@ $red: #891515;
 
         @media screen and (max-width: 768px) {
             font-size: 18px;
-            font-weight: 400;
         }
     }
 }
@@ -151,6 +162,18 @@ $red: #891515;
 .description2 {
     padding: 80px;
     background-color: rgb(15, 16, 17);
+
+    @media screen and (max-width: 1170px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
 
     h3 {
         font-size: 30px;
@@ -160,11 +183,11 @@ $red: #891515;
         margin-bottom: 80px;
         text-transform: uppercase;
 
-        // @media screen and (max-width: 768px) {
-        //     font-size: 35px;
-        //     line-height: 35px;
-        //     font-weight: 500;
-        // }
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 40px;
+        }
     }
 
     &__container {
@@ -172,9 +195,10 @@ $red: #891515;
         grid-template-columns: repeat(3, 1fr);
         gap: 32px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1000px) {
             display: flex;
             flex-direction: column;
+            gap: 16px;
         }
 
         div {
@@ -196,12 +220,19 @@ $red: #891515;
                 height: 10px;
                 background-color: white;
                 border-radius: 100%;
+
+                @media screen and (max-width: 768px) {
+                    width: 7px;
+                    height: 7px;
+                    top: 25px;
+                    left: 7px;
+                }
             }
 
-            // @media screen and (max-width: 768px) {
-            //     font-size: 18px;
-            //     font-weight: 400;
-            // }
+            @media screen and (max-width: 768px) {
+                padding-left: 15px;
+                padding: 16px;
+            }
 
             &:hover {
                 box-shadow: 0 20px 70px -10px #08285566;
@@ -216,6 +247,18 @@ $red: #891515;
     padding: 80px;
     background-color: #000000;
 
+    @media screen and (max-width: 1170px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
+
     h3 {
         font-size: 30px;
         font-weight: 900;
@@ -225,9 +268,9 @@ $red: #891515;
         text-transform: uppercase;
 
         @media screen and (max-width: 768px) {
-            font-size: 35px;
-            line-height: 35px;
-            font-weight: 500;
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 40px;
         }
 
         span {
@@ -240,6 +283,9 @@ $red: #891515;
         font-weight: 400;
         color: white;
 
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 
     &__container {
@@ -248,9 +294,10 @@ $red: #891515;
         gap: 32px;
         padding-top: 30px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1000px) {
             display: flex;
             flex-direction: column;
+            gap: 16px;
         }
 
         div {
@@ -267,10 +314,9 @@ $red: #891515;
             color: #fff;
             transition: box-shadow 0.6s ease, transform 0.6s ease;
 
-            // @media screen and (max-width: 768px) {
-            //     font-size: 18px;
-            //     font-weight: 400;
-            // }
+            @media screen and (max-width: 768px) {
+                padding: 16px;
+            }
 
             &:hover {
                 box-shadow: 0 20px 70px -10px #08285566;
@@ -291,8 +337,8 @@ $red: #891515;
     text-align: center;
 
     @media screen and (max-width: 768px) {
-        font-size: 35px;
-        line-height: 35px;
-        font-weight: 500;
+        padding: 20px;
+        font-size: 20px;
+        line-height: 25px;
     }
 }

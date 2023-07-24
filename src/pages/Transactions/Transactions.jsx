@@ -7,17 +7,29 @@ import SideBar from '../../components/NavSideBar/SideBar';
 
 const textAnimation = {
     hidden: {
-        y: -100,
-        opacity: 0,
+        rotateY: 90,
     },
     visible: custom => ({
-        y: 0,
-        opacity: 1,
+        rotateY: 0,
         transition: { delay: custom * 0.3 },
 
     }),
 }
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            delayChildren: 0.5,
+            staggerDirection: -1
+        }
+    }
+}
 
+const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+}
 export default function Transactions() {
     const [isHovered, setIsHovered] = React.useState(false);
 
@@ -40,9 +52,7 @@ export default function Transactions() {
         <>
             <SideBar />
             <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.2, once: true }}
+
                 className={s.investment}>
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
@@ -65,17 +75,20 @@ export default function Transactions() {
                                 style={{
                                     transition: 'stroke 0.3s ease',
                                     stroke: isHovered ? '#891515' : 'white',
+                                    fill: 'none', // Add this line to remove the black background
                                 }}
                             />
                         </svg>
                     </button>
-                    <div className={s.container}>
+                    <motion.div variants={container}
+                        initial="hidden"
+                        animate="show" className={s.container}>
                         <div className={s.investment__title}>
                             <motion.h1
-                                custom={1} variants={textAnimation}
+                                variants={item}
                             >Сделки</motion.h1>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div ref={bottomBlockRef}>
                     <div className={s.description1}>
@@ -85,12 +98,34 @@ export default function Transactions() {
                     </div>
                     <div className={s.description2}>
                         <div className="container">
-                            <div className={s.description2__container}>
-                                <div className={s.description2__text}>Обеспечение крепкого юридического тыла в процессе инициации и осуществлении сделок различного плана - это то, чем наши эксперты занимаются каждый день. Мы ориентированы на повышение ценности сделок и можем помочь в успешном их завершении на любом этапе.</div>
-                                <div className={s.description2__text}>Если ваша компания стремится к быстрому развитию, расширению возможностей, повышению конкурентоспособности или сталкивается с релевантными этим процессам запросами - мы можем помочь вам безопасно и юридически эффективно пройти все этапы максимально успешно.</div>
-                                <div className={s.description2__text}>Мы предоставляем нашим клиентам глубокий анализ юридических документов и оценку рисков, чтобы помочь им принимать обоснованные решения в процессе совершения сделок.</div>
-                                <div className={s.description2__text}>Мы также обеспечиваем подготовку необходимых документов и проводим переговоры с другими сторонами, чтобы защитить интересы наших клиентов и добиться наилучших условий.</div>
-                            </div>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ amount: 0.2, once: true }} className={s.description2__container}>
+                                <motion.div custom={1}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.description2__text}>Обеспечение крепкого юридического тыла в процессе инициации и осуществлении сделок различного плана - это то, чем наши эксперты занимаются каждый день. Мы ориентированы на повышение ценности сделок и можем помочь в успешном их завершении на любом этапе.</motion.div>
+                                <motion.div custom={1}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.description2__text}>Если ваша компания стремится к быстрому развитию, расширению возможностей, повышению конкурентоспособности или сталкивается с релевантными этим процессам запросами - мы можем помочь вам безопасно и юридически эффективно пройти все этапы максимально успешно.</motion.div>
+                                <motion.div custom={2}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.description2__text}>Мы предоставляем нашим клиентам глубокий анализ юридических документов и оценку рисков, чтобы помочь им принимать обоснованные решения в процессе совершения сделок.</motion.div>
+                                <motion.div custom={2}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.description2__text}>Мы также обеспечиваем подготовку необходимых документов и проводим переговоры с другими сторонами, чтобы защитить интересы наших клиентов и добиться наилучших условий.</motion.div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

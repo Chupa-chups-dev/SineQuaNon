@@ -18,7 +18,21 @@ const textAnimation = {
 
     }),
 }
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            delayChildren: 0.5,
+            staggerDirection: -1
+        }
+    }
+}
 
+const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+}
 const initialValues = {
     firstName: '',
     lastName: '',
@@ -156,9 +170,6 @@ export default function Contacts() {
         <>
             <SideBar />
             <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.2, once: true }}
                 className={s.contacts}>
                 <div className={s.contacts__container}>
                     <div className={s.Bg}></div>
@@ -181,15 +192,18 @@ export default function Contacts() {
                                 style={{
                                     transition: 'stroke 0.3s ease',
                                     stroke: isHovered ? '#891515' : 'white',
+                                    fill: 'none', // Add this line to remove the black background
                                 }}
                             />
                         </svg>
                     </button>
-                    <div className={s.container}>
+                    <motion.div variants={container}
+                        initial="hidden"
+                        animate="show" className={s.container}>
                         <div className={s.contacts__title}>
-                            <motion.h1 custom={1} variants={textAnimation}>Контакты</motion.h1>
+                            <motion.h1 variants={item}>Контакты</motion.h1>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <motion.div
                     initial="hidden"
@@ -234,12 +248,6 @@ export default function Contacts() {
                     <div className="container">
                         <h4 className={s.formContact__title}>Чтобы отправить нам сообщение, пожалуйста, заполните форму ниже:</h4>
                         <form onSubmit={handleSubmit}>
-                            {/* <div>
-                        <input className={s.input} onBlur={fetchCompanyName} onInvalid={handleInvalidInn} pattern="^\d{10}$" type="text" placeholder='ИНН' name="inn" value={inn} onChange={(e) => setInn(e.target.value)} required />
-                    </div> */}
-                            {/* <div>
-                        <input className={s.input} type="text" name="companyName" placeholder='Название компании:' value={companyName} readOnly />
-                    </div> */}
                             <div className={s.inputContainer}>
                                 <div>
                                     <label>Имя</label>
@@ -286,10 +294,6 @@ export default function Contacts() {
                                     Отправить
                                 </button>
                             </div>
-                            {/* <div className={s.checkbox}>
-                        <input type="checkbox" checked={informationConsent} onChange={(e) => setInformationConsent(e.target.checked)} name="informationConsent" required />
-                        {t('Igive')}{t('informationMaterials')}
-                    </div> */}
                         </form>
                     </div>
                 </div>

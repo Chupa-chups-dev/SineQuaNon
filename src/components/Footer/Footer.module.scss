@@ -16,10 +16,6 @@ $red: #891515;
     gap: 2rem;
     padding: 64px 0;
 
-    @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     @media screen and (max-width: 590px) {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -30,11 +26,12 @@ $red: #891515;
         font-weight: 500;
         color: $red;
     }
-    &__industry {
-        margin-right: auto;
-    }
     &__contactus {
         margin-left: auto;
+        @media screen and (max-width: 590px) {
+            margin-left: 0;
+            margin-right: auto;
+        }
     }
     &__list {
         li {

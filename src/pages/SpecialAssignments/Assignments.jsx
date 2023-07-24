@@ -4,20 +4,31 @@ import { motion } from 'framer-motion'
 import s from './Assignments.module.scss'
 import Footer from '../../components/Footer/Footer';
 import SideBar from '../../components/NavSideBar/SideBar';
-
 const textAnimation = {
     hidden: {
-        y: -100,
-        opacity: 0,
+        rotateY: 90,
     },
     visible: custom => ({
-        y: 0,
-        opacity: 1,
+        rotateY: 0,
         transition: { delay: custom * 0.3 },
 
     }),
 }
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            delayChildren: 0.5,
+            staggerDirection: -1
+        }
+    }
+}
 
+const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+}
 export default function Assignments() {
     const [isHovered, setIsHovered] = React.useState(false);
 
@@ -40,9 +51,7 @@ export default function Assignments() {
         <>
             <SideBar />
             <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.2, once: true }}
+
                 className={s.investment}>
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
@@ -69,13 +78,16 @@ export default function Assignments() {
                             />
                         </svg>
                     </button>
-                    <div className={s.container}>
+                    <motion.div
+                        variants={container}
+                        initial="hidden"
+                        animate="show" className={s.container}>
                         <div className={s.investment__title}>
                             <motion.h1
-                                custom={1} variants={textAnimation}
+                                variants={item}
                             >Особые поручения</motion.h1>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div ref={bottomBlockRef}>
                     <div className={s.information}>
@@ -86,13 +98,40 @@ export default function Assignments() {
                     <div className={s.content}>
                         <div className="container">
                             <p className={s.content__title}>Примеры особых поручений:</p>
-                            <ul>
-                                <li>Брачные договоры и раздел активов супругов;</li>
-                                <li>Представительство в рамках административных и уголовных дел, включая срочные вызовы;</li>
-                                <li>Медиация непубличных конфликтов;</li>
-                                <li>Открытие счетов в иностранных банках, консультирование по вопросам ведения счетов;</li>
-                                <li>Приобретение активов в зарубежных юрисдикциях.</li>
-                            </ul>
+                            <motion.ul initial="hidden"
+                                whileInView="visible"
+                                viewport={{ amount: 0.2, once: true }}>
+                                <motion.li custom={1}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation}>Брачные договоры и раздел активов супругов;</motion.li>
+                                <motion.li custom={1}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation}>Представительство в рамках административных и уголовных дел, включая срочные вызовы;</motion.li>
+                                <motion.li custom={1}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation}>Медиация непубличных конфликтов;</motion.li>
+                                <motion.li custom={2}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation}>Открытие счетов в иностранных банках, консультирование по вопросам ведения счетов;</motion.li>
+                                <motion.li custom={2}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation}>Приобретение активов в зарубежных юрисдикциях.</motion.li>
+                            </motion.ul>
                         </div>
                     </div>
                 </div>

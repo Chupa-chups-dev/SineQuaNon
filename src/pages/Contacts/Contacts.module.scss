@@ -25,24 +25,17 @@ $red: #891515;
 
         h1 {
             font-size: 100px;
-            font-weight: 400;
-            color: #fff;
+            font-weight: 700;
+            color: $red;
             text-align: center;
             text-transform: uppercase;
 
             @media screen and (max-width: 900px) {
-                font-size: 80px;
-                font-weight: 400;
+                font-size: 65px;
             }
 
             @media screen and (max-width: 768px) {
-                font-size: 75px;
-                font-weight: 400;
-            }
-
-            @media screen and (max-width: 500px) {
-                font-size: 50px;
-                font-weight: 400;
+                font-size: 55px;
             }
         }
     }
@@ -61,6 +54,10 @@ $red: #891515;
     width: 100%;
     height: 100vh;
     background-color: black;
+    background-image: url(../../assets/ContactsBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     z-index: -1;
 }
 
@@ -181,6 +178,11 @@ $red: #891515;
     padding-top: 96px;
     padding-bottom: 96px;
 
+    @media screen and (max-width: 768px) {
+        padding-top: 48px;
+        padding-bottom: 58px;
+    }
+
     a {
         position: relative;
         font-size: 38px;
@@ -212,8 +214,7 @@ $red: #891515;
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 13px;
-            padding: 15px 30px;
+            font-size: 18px;
         }
     }
 }
@@ -222,11 +223,35 @@ $red: #891515;
 .map {
     padding: 80px;
     background-color: rgb(15, 16, 17);
+
+    @media screen and (max-width: 1170px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
 }
 
 .formContact {
     padding: 80px;
     background-color: #000000;
+
+    @media screen and (max-width: 1170px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
 
     &__title {
         font-size: 30px;
@@ -235,6 +260,12 @@ $red: #891515;
         color: white;
         margin-bottom: 80px;
         text-transform: uppercase;
+
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
     }
 
     label {
@@ -257,6 +288,12 @@ $red: #891515;
     gap: 32px;
 
     width: 60%;
+
+    @media screen and (max-width: 768px) {
+        gap: 0px;
+        flex-direction: column;
+        width: 100%;
+    }
 
     div {
         width: 100%;
@@ -283,6 +320,10 @@ $red: #891515;
     &:focus {
         background-color: white;
     }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 16px;
+    }
 }
 
 .textarea {
@@ -308,6 +349,11 @@ $red: #891515;
             background-color: white;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 22px;
+        width: 100%;
+    }
 }
 
 .checkbox {
@@ -321,6 +367,10 @@ $red: #891515;
     label {
         font-size: 16px;
         font-weight: 300;
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 22px;
+        width: 100%;
     }
 }
 
@@ -376,6 +426,7 @@ $red: #891515;
         text-transform: uppercase;
         font-size: 18px;
         font-weight: 400;
+
         &:hover {
             background-color: #660f0f;
         }

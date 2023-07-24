@@ -26,29 +26,21 @@ $red: #891515;
 
         h1 {
             font-size: 75px;
-            font-weight: 400;
-            color: #fff;
+            font-weight: 700;
+            color: $red;
             text-align: center;
             text-transform: uppercase;
 
             @media screen and (max-width: 900px) {
                 font-size: 65px;
-                font-weight: 400;
             }
 
             @media screen and (max-width: 768px) {
                 font-size: 55px;
-                font-weight: 400;
             }
 
             @media screen and (max-width: 500px) {
-                font-size: 35px;
-                font-weight: 400;
-            }
-
-            @media screen and (max-width: 400px) {
-                font-size: 30px;
-                font-weight: 400;
+                font-size: 33px;
             }
         }
 
@@ -69,22 +61,11 @@ $red: #891515;
     width: 100%;
     height: 100vh;
     background-color: black;
-    // background-image: url(../../assets/InvestmentBg.jpg);
-    // background-size: 100% 100%;
-    // background-repeat: no-repeat;
+    background-image: url(../../assets/International_practiceBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     z-index: -1;
-}
-
-.category {
-    background-color: #fff;
-
-    &__container {
-        display: flex;
-        padding-top: 45px;
-        padding-bottom: 75px;
-        gap: 40px;
-    }
-
 }
 
 .backToHome {
@@ -97,6 +78,11 @@ $red: #891515;
     background-color: rgb(244, 244, 245);
     padding-top: 96px;
     padding-bottom: 96px;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 48px;
+        padding-bottom: 58px;
+    }
 
     a {
         position: relative;
@@ -129,8 +115,7 @@ $red: #891515;
         }
 
         @media screen and (max-width: 768px) {
-            font-size: 13px;
-            padding: 15px 30px;
+            font-size: 18px;
         }
     }
 }
@@ -139,6 +124,18 @@ $red: #891515;
 .information__title {
     padding: 80px;
 
+    @media screen and (max-width: 1170px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
+
     h3 {
         font-size: 24px;
         font-weight: 400;
@@ -146,8 +143,8 @@ $red: #891515;
         text-align: center;
 
         @media screen and (max-width: 768px) {
-            font-size: 18px;
-            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
         }
     }
 
@@ -160,55 +157,56 @@ $red: #891515;
     padding: 80px;
     background-color: rgb(15, 16, 17);
 
+    @media screen and (max-width: 1170px) {
+        padding: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+    }
+
     p {
         font-size: 30px;
         font-weight: 300;
         line-height: 40px;
         text-align: center;
         color: white;
+
+        @media screen and (max-width: 768px) {
+            font-size: 22px;
+            line-height: 25px;
+        }
     }
 }
 
 .countries {
-
     padding: 80px;
     background-color: #000000;
-}
 
-.country {
-
-
-    background: #d11018;
-    cursor: pointer;
-    transition: max-height 0.4s ease;
-    max-height: 100px;
-
-    h2 {
-        text-align: center;
-        font-size: 24px;
-        font-weight: 400;
-        padding: 30px 0;
-        color: #fff;
-        text-transform: uppercase;
-
-        @media screen and (max-width: 768px) {
-            font-size: 18px;
-            font-weight: 400;
-            padding: 20px 0;
-
-        }
+    @media screen and (max-width: 1170px) {
+        padding: 80px 60px;
     }
 
-    &:hover {
-        transform: translateY(2px);
-        transition: transform 0.6s ease;
+    @media screen and (max-width: 900px) {
+        padding: 80px 40px;
+    }
 
+    @media screen and (max-width: 768px) {
+        padding: 80px 20px;
     }
 }
+
 
 .expanded {
     max-height: 1000px;
     /* Максимальная высота при открытии */
+    @media screen and (max-width: 768px) {
+        max-height: 2000px;
+    }
 }
 
 .contentWrapper {
@@ -324,6 +322,15 @@ $red: #891515;
     grid-template-columns: repeat(3, 1fr);
     gap: 100px 32px;
     padding-top: 30px;
+    justify-items: center; 
+    align-items: center; 
+    @media screen and (max-width: 1350px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 920px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .container .card {
@@ -338,34 +345,58 @@ $red: #891515;
     padding: 32px;
     transition: all 1s;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    @media screen and (max-width: 768px) {
+        height: 250px;
+        padding: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .container .card:hover {
     height: 1400px;
     transition: all 1s;
-
+    
     &:nth-child(6) {
         height: 650px;
+        @media screen and (max-width: 768px) {
+            height: 800px;;
+        }
     }
 
     &:nth-child(1) {
         height: 1360px;
+        @media screen and (max-width: 768px) {
+            height: 2032px;
+        }
     }
 
     &:nth-child(2) {
         height: 1325px;
+        @media screen and (max-width: 768px) {
+            height: 2170px;
+        }
     }
 
     &:nth-child(3) {
         height: 1140px;
+        @media screen and (max-width: 768px) {
+            height: 1826px;
+        }
     }
 
     &:nth-child(4) {
         height: 1315px;
+        @media screen and (max-width: 768px) {
+            height: 2107px;
+        }
     }
 
     &:nth-child(5) {
         height: 1270px;
+        @media screen and (max-width: 768px) {
+            height: 2064px;
+        }
     }
 }
 
@@ -378,6 +409,10 @@ $red: #891515;
     background: #333;
     overflow: hidden;
     transition: all 1s;
+    @media screen and (max-width: 768px) {
+        width: 200px;
+        height: 160px;
+    }
 }
 
 .container .card:hover .img__box {
@@ -405,12 +440,18 @@ $red: #891515;
     padding: 0 30px;
     overflow: hidden;
     transition: all 1s;
+    @media screen and (max-width: 768px) {
+        top: 202px;
+    }
 }
 
 .container .card:hover .content {
     top: 130px;
     height: 1250px;
     transition: all 3s;
+    @media screen and (max-width: 768px) {
+        height: 2500px;
+    }
 }
 
 @media (max-width: 480px) {

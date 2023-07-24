@@ -17,10 +17,10 @@ export default function Main() {
     <>
       <SideBar />
       <Home bottomBlockRef={bottomBlockRef} />
-      <Consultation bottomBlockRef={bottomBlockRef} />
+      {/* <Consultation bottomBlockRef={bottomBlockRef} />
       <PublicPractice />
-      <PrivatePractice />
-      <Projects />
+      <PrivatePractice /> */}
+      <Projects  bottomBlockRef={bottomBlockRef} />
       <Footer />
     </>
   )

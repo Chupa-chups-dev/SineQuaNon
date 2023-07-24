@@ -5,21 +5,36 @@ import s from './Practice.module.scss'
 import Footer from '../../components/Footer/Footer';
 import SideBar from '../../components/NavSideBar/SideBar';
 import { useState } from 'react';
-import uae from "../../assets/uae.jpg"
+import Uae from "../../assets/uae.jpg"
+import Kazakhstan from "../../assets/Kazakhstan.jpg"
+import Uzbekistan from "../../assets/Uzbekistan.jpg"
+import HongKong from "../../assets/HongKong.jpg"
 
 const textAnimation = {
     hidden: {
-        y: -100,
-        opacity: 0,
+        rotateY: 90,
     },
     visible: custom => ({
-        y: 0,
-        opacity: 1,
+        rotateY: 0,
         transition: { delay: custom * 0.3 },
 
     }),
 }
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            delayChildren: 0.5,
+            staggerDirection: -1
+        }
+    }
+}
 
+const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+}
 
 export default function Practice() {
     const [isHovered, setIsHovered] = useState(false);
@@ -46,9 +61,7 @@ export default function Practice() {
         <>
             <SideBar />
             <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.2, once: true }}
+
                 className={s.investment}>
                 <div className={s.investment__container}>
                     <div className={s.Bg}></div>
@@ -71,17 +84,21 @@ export default function Practice() {
                                 style={{
                                     transition: 'stroke 0.3s ease',
                                     stroke: isHovered ? '#891515' : 'white',
+                                    fill: 'none', // Add this line to remove the black background
                                 }}
                             />
                         </svg>
                     </button>
-                    <div className={s.containerInvestment}>
+                    <motion.div
+                        variants={container}
+                        initial="hidden"
+                        animate="show" className={s.containerInvestment}>
                         <div className={s.investment__title}>
                             <motion.h1
-                                custom={1} variants={textAnimation}
+                                variants={item}
                             >Международная практика</motion.h1>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div ref={bottomBlockRef}>
                     <div className={s.information__title}>
@@ -96,10 +113,17 @@ export default function Practice() {
                     </div>
                     <div className={s.countries}>
                         <div className='container'>
-                            <div className={s.container}>
-                                <div className={s.card}>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ amount: 0.2, once: true }} className={s.container}>
+                                <motion.div custom={1}
+                                            transition={{
+                                                duration: 0.5, // Время анимации
+                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                            }}
+                                            variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
-                                        <img src={uae} alt="" />
+                                        <img src={Uae} alt="" />
                                     </div>
                                     <div className={s.content}>
                                         <h2>ОАЭ</h2>
@@ -115,10 +139,15 @@ export default function Practice() {
                                         <p>Помощь в открытии банковских счетов и обслуживании банковских операций;</p>
                                         <p>Юридическая поддержка при решении споров с государственными органами или другими компаниями в ОАЭ.</p>
                                     </div>
-                                </div>
-                                <div className={s.card}>
+                                </motion.div>
+                                <motion.div custom={1}
+                                            transition={{
+                                                duration: 0.5, // Время анимации
+                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                            }}
+                                            variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
-                                        <img src={uae} alt="" />
+                                        <img src={Kazakhstan} alt="" />
                                     </div>
                                     <div className={s.content}>
                                         <h2>Казахстан</h2>
@@ -132,10 +161,15 @@ export default function Practice() {
                                         <p>Помощь в локализации на территории свободных экономических зон Казахстана;</p>
                                         <p>Юридическая поддержка при решении споров с государственными органами или другими компаниями в Казахстане.</p>
                                     </div>
-                                </div>
-                                <div className={s.card}>
+                                </motion.div>
+                                <motion.div custom={1}
+                                            transition={{
+                                                duration: 0.5, // Время анимации
+                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                            }}
+                                            variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
-                                        <img src={uae} alt="" />
+                                        <img src={Uzbekistan} alt="" />
                                     </div>
                                     <div className={s.content}>
                                         <h2>Узбекистан</h2>
@@ -148,10 +182,15 @@ export default function Practice() {
                                         <p>Помощь в открытии банковских счетов и обслуживании банковских операций;</p>
                                         <p>Юридическая поддержка при решении споров с государственными органами или другими компаниями в Узбекистане.</p>
                                     </div>
-                                </div>
-                                <div className={s.card}>
+                                </motion.div>
+                                <motion.div custom={2}
+                                            transition={{
+                                                duration: 0.5, // Время анимации
+                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                            }}
+                                            variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
-                                        <img src={uae} alt="" />
+                                        <img src={Uae} alt="" />
                                     </div>
                                     <div className={s.content}>
                                         <h2>Индия</h2>
@@ -166,10 +205,15 @@ export default function Practice() {
                                         <p>Помощь в открытии банковских счетов и обслуживании банковских операций;</p>
                                         <p>Юридическая поддержка при решении споров с государственными органами или другими компаниями в Индии.</p>
                                     </div>
-                                </div>
-                                <div className={s.card}>
+                                </motion.div>
+                                <motion.div custom={2}
+                                            transition={{
+                                                duration: 0.5, // Время анимации
+                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                            }}
+                                            variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
-                                        <img src={uae} alt="" />
+                                        <img src={HongKong} alt="" />
                                     </div>
                                     <div className={s.content}>
                                         <h2>Гонконг (Китай)</h2>
@@ -183,18 +227,23 @@ export default function Practice() {
                                         <p>Подготовка договоров с поставщиками, партнерами и клиентами, включая международные поставки и дилерские контракты;</p>
                                         <p>Помощь в открытии банковских счетов в китайских банках.</p>
                                     </div>
-                                </div>
-                                <div className={s.card}>
+                                </motion.div>
+                                <motion.div custom={2}
+                                            transition={{
+                                                duration: 0.5, // Время анимации
+                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                            }}
+                                            variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
-                                        <img src={uae} alt="" />
+                                        <img src={Uae} alt="" />
                                     </div>
                                     <div className={s.content}>
                                         <h2>Локализация в иных юрисдикциях</h2>
                                         <h3>SQN сопровождает сделки по локализации бизнеса и в иных юрисдикциях. Опишите нам задачу вашего бизнеса, а мы подготовим подходящее решение.</h3>
                                         <Link to="/Contacts">Контакты</Link>
                                     </div>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         </div>
                     </div>
 
