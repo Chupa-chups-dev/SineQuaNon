@@ -28,7 +28,6 @@ export default function Team() {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.2, once: true }}
                 className={s.team}>
                 <div className="container">
                     <motion.h1 custom={1} variants={textAnimation}>Наша Команда</motion.h1>
