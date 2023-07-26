@@ -226,7 +226,7 @@ export default function Contacts() {
                             </div>
                         </div>
                     </div>
-                    <div className={s.line}></div>
+                    {/* <div className={s.line}></div>
                     <div className={s.map}>
                         <div className="container">
                             <div className={s.coordinates}>
@@ -241,7 +241,7 @@ export default function Contacts() {
                                 </motion.div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </motion.div>
                 <div className={s.formContact}>

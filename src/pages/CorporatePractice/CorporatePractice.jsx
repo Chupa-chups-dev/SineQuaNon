@@ -168,7 +168,11 @@ export default function CorporatePractice() {
                             </motion.div>
                         </div>
                     </div>
-                    <h4 className={s.description4}>Действуя как Корпоративный секретарь, наша фирма сопровождает порядка 20 юридических лиц одновременно.</h4>
+                    <div className={s.description4}>
+                        <div className="container">
+                            <h4>Действуя как Корпоративный секретарь, наша фирма сопровождает порядка 20 юридических лиц одновременно.</h4>
+                        </div>
+                    </div>
                 </div>
                 {/* <div className={s.backToHome}>
                     <Link to="/">Вернуться на главную</Link>

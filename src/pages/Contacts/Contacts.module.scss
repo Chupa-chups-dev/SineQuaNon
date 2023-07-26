@@ -26,7 +26,7 @@ $red: #891515;
         h1 {
             font-size: 100px;
             font-weight: 700;
-            color: $red;
+            color: #fff;
             text-align: center;
             text-transform: uppercase;
 
@@ -77,9 +77,8 @@ $red: #891515;
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: 1135px) {
+    @media screen and (max-width: 768px) {
         flex-direction: column;
-
         gap: 40px;
     }
 
@@ -123,46 +122,17 @@ $red: #891515;
         display: flex;
         align-self: center;
         justify-content: center;
-        width: 660px;
+        max-width: 660px;
+        width: 100%;
         height: 400px;
 
         iframe {
+            width: 100%;
             border-radius: 12px;
         }
 
-        @media screen and (max-width: 768px) {
-            width: 560px;
-        }
+       
 
-        @media screen and (max-width: 668px) {
-            width: 460px;
-        }
-
-        @media screen and (max-width: 568px) {
-            width: 360px;
-        }
-
-        @media screen and (max-width: 468px) {
-            width: 260px;
-        }
-
-        iframe {
-            @media screen and (max-width: 768px) {
-                width: 560px;
-            }
-
-            @media screen and (max-width: 668px) {
-                width: 460px;
-            }
-
-            @media screen and (max-width: 568px) {
-                width: 360px;
-            }
-
-            @media screen and (max-width: 468px) {
-                width: 260px;
-            }
-        }
 
     }
 }
@@ -233,7 +203,7 @@ $red: #891515;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 20px;
+        padding: 20px 0px;
     }
 }
 
@@ -250,7 +220,7 @@ $red: #891515;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 20px;
+        padding: 20px 0px;
     }
 
     &__title {
@@ -337,7 +307,7 @@ $red: #891515;
         font-size: 18px;
         font-weight: 300;
         padding: 12px 8px;
-        background-color: rgb(244, 244, 245);
+        background-color: rgb(219, 218, 218);
         border-width: 1px;
         color: rgb(63, 63, 70);
         border-color: rgb(209, 16, 24);
@@ -368,6 +338,7 @@ $red: #891515;
         font-size: 16px;
         font-weight: 300;
     }
+
     @media screen and (max-width: 768px) {
         margin-bottom: 22px;
         width: 100%;
@@ -420,7 +391,7 @@ $red: #891515;
         background-color: $red;
         color: white;
         min-width: 256px;
-        padding: 12px 48px;
+        padding: 12px 92px;
         border: none;
         order: none;
         text-transform: uppercase;

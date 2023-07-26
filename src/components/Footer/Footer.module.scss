@@ -163,3 +163,13 @@ $red: #891515;
         color: $red;
     }
 }
+
+.list__container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    img {
+        width: 22px;
+        height: 20px;
+    }
+}

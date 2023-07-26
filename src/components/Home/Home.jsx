@@ -40,7 +40,7 @@ export default function Home({ bottomBlockRef }) {
       <motion.div variants={container}
         initial="hidden"
         animate="show" className="container">
-        <motion.h1 variants={item} className={s.home__title}>Sine Qua Non</motion.h1>
+        <motion.h1 transition={{ duration: 2, ease: 'easeInOut' }} variants={item} className={s.home__title}>Sine Qua Non</motion.h1>
         {/* <motion.p custom={2} variants={textAnimation} className={s.home__subtitle}>Юридическая фирма, которая предлагает индивидуальные решения</motion.p>
         <motion.p custom={3} variants={textAnimation} className={s.home__inf}>Комплексное сопровождение проектов и отдельных сделок: проектное финансирование, ГЧП, корпоративные и инвестиционные сделки</motion.p> */}
       </motion.div>

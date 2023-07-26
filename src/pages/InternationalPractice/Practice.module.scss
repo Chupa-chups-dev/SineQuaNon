@@ -27,7 +27,7 @@ $red: #891515;
         h1 {
             font-size: 75px;
             font-weight: 700;
-            color: $red;
+            color: #fff;
             text-align: center;
             text-transform: uppercase;
 
@@ -133,7 +133,7 @@ $red: #891515;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 20px;
+        padding: 20px 0px;
     }
 
     h3 {
@@ -166,7 +166,7 @@ $red: #891515;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 20px;
+        padding: 20px 0px;
     }
 
     p {
@@ -196,13 +196,14 @@ $red: #891515;
     }
 
     @media screen and (max-width: 768px) {
-        padding: 80px 20px;
+        padding: 80px 0px;
     }
 }
 
 
 .expanded {
     max-height: 1000px;
+
     /* Максимальная высота при открытии */
     @media screen and (max-width: 768px) {
         max-height: 2000px;
@@ -317,17 +318,22 @@ $red: #891515;
 }
 
 .container {
+   
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 100px 32px;
     padding-top: 30px;
-    justify-items: center; 
-    align-items: center; 
+
     @media screen and (max-width: 1350px) {
         grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 100px 32px;
     }
-    @media screen and (max-width: 920px) {
+
+    @media screen and (max-width: 890px) {
+     
+        align-items: center;
         display: flex;
         flex-direction: column;
     }
@@ -345,6 +351,7 @@ $red: #891515;
     padding: 32px;
     transition: all 1s;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+
     @media screen and (max-width: 768px) {
         height: 250px;
         padding: 16px;
@@ -356,46 +363,53 @@ $red: #891515;
 .container .card:hover {
     height: 1400px;
     transition: all 1s;
-    
+
     &:nth-child(6) {
         height: 650px;
-        @media screen and (max-width: 768px) {
-            height: 800px;;
+
+        @media screen and (max-width: 360px) {
+            height: 629px;
+            
         }
     }
 
     &:nth-child(1) {
         height: 1360px;
-        @media screen and (max-width: 768px) {
-            height: 2032px;
+
+        @media screen and (max-width: 360px) {
+            height: 1429px;
         }
     }
 
     &:nth-child(2) {
         height: 1325px;
-        @media screen and (max-width: 768px) {
-            height: 2170px;
+
+        @media screen and (max-width: 360px) {
+            height: 1464px;
         }
     }
 
     &:nth-child(3) {
         height: 1140px;
-        @media screen and (max-width: 768px) {
-            height: 1826px;
+
+        @media screen and (max-width: 360px) {
+            height: 1240px;
         }
     }
 
     &:nth-child(4) {
         height: 1315px;
-        @media screen and (max-width: 768px) {
-            height: 2107px;
+
+        @media screen and (max-width: 360px) {
+            height: 1383px;
         }
     }
 
     &:nth-child(5) {
         height: 1270px;
-        @media screen and (max-width: 768px) {
-            height: 2064px;
+
+        @media screen and (max-width: 360px) {
+            height: 1392px;
         }
     }
 }
@@ -409,6 +423,7 @@ $red: #891515;
     background: #333;
     overflow: hidden;
     transition: all 1s;
+
     @media screen and (max-width: 768px) {
         width: 200px;
         height: 160px;
@@ -440,6 +455,7 @@ $red: #891515;
     padding: 0 30px;
     overflow: hidden;
     transition: all 1s;
+
     @media screen and (max-width: 768px) {
         top: 202px;
     }
@@ -449,18 +465,20 @@ $red: #891515;
     top: 130px;
     height: 1250px;
     transition: all 3s;
+
     @media screen and (max-width: 768px) {
+        top: 60px;
         height: 2500px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .container .card {
-        width: 230px;
+        width: 100%;
     }
 
     .container .card .img-box {
-        width: 185px;
+        width: 100%;
     }
 
 }

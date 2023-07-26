@@ -1,0 +1,96 @@
+$red: #891515;
+
+.menu {
+    width: 100%;
+    height: 544px;
+    overflow: hidden;
+    padding: 80px 0px 80px 50px;
+
+    @media screen and (max-width: 1170px) {
+        padding: 60px 0px 60px 50px;
+        height: 504px;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding: 40px 0px 40px 50px;
+        height: 354px;
+    }
+
+    @media screen and (max-width: 800px) {
+        height: 310px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 20px 0px 20px 0px;
+        height: 200px;
+    }
+}
+
+.menu__content {
+    /* Исправлено здесь: одно нижнее подчеркивание */
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+        width: fit-content;
+        position: relative;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 2em;
+        color: #ffffff;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: $red;
+            opacity: 0;
+            transform: scaleX(0);
+            transition: opacity 0.7s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+        @media screen and (max-width: 1000px) {
+            font-size: 42px;
+            line-height: 1.8em;
+        }
+        @media screen and (max-width: 900px) {
+            font-size: 37px;
+            line-height: 1.8em;
+        }
+        @media screen and (max-width: 800px) {
+            font-size: 30px;
+            line-height: 1.8em;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 22px;
+            line-height: 1.8em;
+        }
+    }
+
+
+}
+
+.menu__content::-webkit-scrollbar {
+    display: none;
+}
+
+.category {
+    background-color: rgb(15, 16, 17);
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+}
