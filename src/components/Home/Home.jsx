@@ -34,7 +34,9 @@ export default function Home({ bottomBlockRef }) {
   return (
     <div
       className={s.home}
-    >
+    > 
+
+      <div className={s.homeBgBlack}></div>
       <div className={s.homeBg}></div>
 
       <motion.div variants={container}

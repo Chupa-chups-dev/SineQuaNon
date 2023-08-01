@@ -54,6 +54,7 @@ export default function Assignments() {
 
                 className={s.investment}>
                 <div className={s.investment__container}>
+                    <div className={s.BgBlack}></div>
                     <div className={s.Bg}></div>
                     <button onClick={scrollToBottom} className="arrow">
                         <svg
@@ -74,6 +75,7 @@ export default function Assignments() {
                                 style={{
                                     transition: 'stroke 0.3s ease',
                                     stroke: isHovered ? '#891515' : 'white',
+                                    fill: 'none', // Add this line to remove the black background
                                 }}
                             />
                         </svg>

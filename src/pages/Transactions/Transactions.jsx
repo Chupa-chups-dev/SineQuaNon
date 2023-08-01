@@ -55,6 +55,7 @@ export default function Transactions() {
 
                 className={s.investment}>
                 <div className={s.investment__container}>
+                    <div className={s.BgBlack}></div>
                     <div className={s.Bg}></div>
                     <button onClick={scrollToBottom} className="arrow">
                         <svg

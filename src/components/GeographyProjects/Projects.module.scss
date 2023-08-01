@@ -52,7 +52,7 @@ $red: #891515;
     left: 10%;
     max-width: 42px;
     max-height: 42px;
-
+    transition: top 0.3s ease;
     &:hover .text {
         opacity: 1;
         visibility: visible;

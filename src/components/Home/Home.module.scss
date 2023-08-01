@@ -86,17 +86,27 @@ $red: #891515;
     // }
 }
 
+.homeBgBlack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: -2;
+}
+
 .homeBg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: black;
     background-image: url(../../assets/lawyers.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    opacity: 0.4;
     z-index: -1;
 }
 

@@ -5,6 +5,7 @@ import axios from 'axios';
 import SideBar from '../../components/NavSideBar/SideBar'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import Swiper from '../../components/SwiperEmployees/SwiperEmployees';
 
 const textAnimation = {
     hidden: {
@@ -172,6 +173,7 @@ export default function Contacts() {
             <motion.div
                 className={s.contacts}>
                 <div className={s.contacts__container}>
+                    <div className={s.BgBlack}></div>
                     <div className={s.Bg}></div>
                     <button onClick={scrollToBottom} className="arrow">
                         <svg
@@ -226,22 +228,6 @@ export default function Contacts() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className={s.line}></div>
-                    <div className={s.map}>
-                        <div className="container">
-                            <div className={s.coordinates}>
-                                <motion.div custom={3} variants={textAnimation} className={s.coordinates__map}>
-                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8b073049f4f5f5e1e631bc819ce518315021a6c05497663bc4df416dd4305c38&amp;source=constructor" width="660" height="400" frameborder="0"></iframe>
-                                </motion.div>
-                                <motion.div custom={4} variants={textAnimation} className={s.coordinates__inf}>
-                                    <h5>Офис в Санкт-Петербурге</h5>
-                                    <div>E-mail: <a href="mailto:">info@sqn-law.ru</a></div>
-                                    <div>Tel.: <a href="tel:+74997058878">+7 499 705 88 78</a></div>
-                                    <div>2023 © ООО "SineQuaNon"</div>
-                                </motion.div>
-                            </div>
-                        </div>
-                    </div> */}
 
                 </motion.div>
                 <div className={s.formContact}>
@@ -297,6 +283,7 @@ export default function Contacts() {
                         </form>
                     </div>
                 </div>
+                <Swiper />
                 <div className={s.backToHome}>
                     <Link to="/">Вернуться на главную</Link>
                 </div>

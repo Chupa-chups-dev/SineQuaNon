@@ -55,6 +55,7 @@ export default function CorporatePractice() {
             <motion.div
                 className={s.practice}>
                 <div className={s.practice__container}>
+                    <div className={s.BgBlack}></div>
                     <div className={s.Bg}></div>
                     <button onClick={scrollToBottom} className="arrow">
                         <svg

@@ -1,96 +1,119 @@
-$red: #891515;
+.category {
+    padding-left: 50px;
+    background-color: black;
+    @media screen and (max-width: 768px) {
+        padding-left: 0;
+    }
+
+}
 
 .menu {
+    justify-content: center;
     width: 100%;
-    height: 544px;
-    overflow: hidden;
-    padding: 80px 0px 80px 50px;
-
-    @media screen and (max-width: 1170px) {
-        padding: 60px 0px 60px 50px;
-        height: 504px;
-    }
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     @media screen and (max-width: 900px) {
-        padding: 40px 0px 40px 50px;
-        height: 354px;
+        grid-template-columns: repeat(2, 1fr);
     }
-
-    @media screen and (max-width: 800px) {
-        height: 310px;
-    }
-    @media screen and (max-width: 768px) {
-        padding: 20px 0px 20px 0px;
-        height: 200px;
-    }
-}
-
-.menu__content {
-    /* Исправлено здесь: одно нижнее подчеркивание */
-    height: 100%;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
     a {
-        width: fit-content;
         position: relative;
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 2em;
-        color: #ffffff;
-        display: inline-block;
+        overflow: hidden;
+        height: 213px;
+        width: 100%;
+        @media screen and (max-width: 768px) {
+            height: 173px;
+        }
+        @media screen and (max-width: 400px) {
+            height: 153px;
+        }
+        &:hover {
+            img {
+                opacity: 1;
+                transform: scale(1.01);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+            transform: scale(1.05);
+            transition: opacity .5s linear, transform .3s ease-in-out;
+            background-size: cover;
+            object-position: center;
+            object-fit: cover;
+        }
+
+        div {
+            align-items: center;
+            bottom: 0;
+            display: flex;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            top: 0;
+            transition: opacity 2s cubic-bezier(.19, 1, .22, 1), transform 2s cubic-bezier(.19, 1, .22, 1);
+            z-index: 10;
+
+            h2 {
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 24px;
+                font-weight: 700;
+                color: #fff;
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 15px;
+                }
+            }
+        }
 
         &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
+            background: linear-gradient(180deg, #000 0, #0000);
+            content: "";
+            height: 100%;
             left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: $red;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity .5s linear;
+            z-index: 1;
+        }
+
+        &:hover:before {
+            opacity: .5;
+        }
+
+        &:after {
+            background: #d11018;
+            bottom: 0;
+            content: "";
+            height: 1px;
+            left: 50%;
             opacity: 0;
-            transform: scaleX(0);
-            transition: opacity 0.7s ease-in-out, transform 0.3s ease-in-out;
+            position: absolute;
+            right: 0;
+            transform: translateX(-50%);
+            transition: opacity .4s linear, width .4s ease-in-out, height .4s ease-in-out;
+            width: 10%;
         }
 
-        &:hover::before {
+        &:hover:after {
+            height: 5px;
             opacity: 1;
-            transform: scaleX(1);
+            width: 100%;
         }
-        @media screen and (max-width: 1000px) {
-            font-size: 42px;
-            line-height: 1.8em;
+
+        &:hover {
+            color: rgb(255, 255, 255);
         }
-        @media screen and (max-width: 900px) {
-            font-size: 37px;
-            line-height: 1.8em;
-        }
-        @media screen and (max-width: 800px) {
-            font-size: 30px;
-            line-height: 1.8em;
-        }
-        @media screen and (max-width: 768px) {
-            font-size: 22px;
-            line-height: 1.8em;
-        }
+
+
     }
-
-
-}
-
-.menu__content::-webkit-scrollbar {
-    display: none;
-}
-
-.category {
-    background-color: rgb(15, 16, 17);
-}
-
-.container {
-    width: 100%;
-    padding: 0 15px;
 }

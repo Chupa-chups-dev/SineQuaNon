@@ -4,12 +4,10 @@ import Home from '../../components/Home/Home'
 import Footer from '../../components/Footer/Footer'
 import Category from '../../components/CategoryScrollBar/Category'
 import Projects from '../../components/GeographyProjects/Projects'
-import PrivatePractice from '../../components/PrivatePractice/Practice'
-import PublicPractice from '../../components/PublicPractice/Practice'
 
 
 export default function Main() {
-  
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,11 +16,8 @@ export default function Main() {
     <>
       <SideBar />
       <Home bottomBlockRef={bottomBlockRef} />
-      <Category />
-      {/* <Consultation bottomBlockRef={bottomBlockRef} />
-      <PublicPractice />
-      <PrivatePractice /> */}
-      <Projects bottomBlockRef={bottomBlockRef} />
+      <Category bottomBlockRef={bottomBlockRef} />
+      <Projects />
       <Footer />
     </>
   )

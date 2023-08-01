@@ -6,7 +6,7 @@ import place from './../../assets/place.svg';
 
 
 const container = {
-    hidden: { opacity: 0},
+    hidden: { opacity: 0 },
     visible: {
         opacity: 1,
         transition: {
@@ -31,9 +31,10 @@ const item = {
     }
 };
 
-export default function Projects({ bottomBlockRef }) {
+export default function Projects() {
     const projectsRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [hasAnimated, setHasAnimated] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,7 +44,10 @@ export default function Projects({ bottomBlockRef }) {
             const windowHeight = window.innerHeight || document.documentElement.clientHeight;
             const isInViewport = rect.top < windowHeight && rect.bottom >= 0;
 
-            setIsVisible(isInViewport);
+            if (!hasAnimated && isInViewport) {
+                setIsVisible(true);
+                setHasAnimated(true);
+            }
         };
 
         // Присоединяем слушателя события прокрутки
@@ -56,10 +60,11 @@ export default function Projects({ bottomBlockRef }) {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [hasAnimated]);
+
+
     return (
         <div
-            ref={bottomBlockRef}
             className={s.projects}>
             <div
 
@@ -71,11 +76,11 @@ export default function Projects({ bottomBlockRef }) {
                     variants={container}
                     initial="hidden"
                     animate={isVisible ? 'visible' : 'hidden'}
-                    viewport={{ amount: 0 }}
-                    transition={{ duration: 3, ease: 'easeInOut' }}
+                    viewport={{ amount: 0, once: true }}
+                    transition={{ duration: 3, ease: 'easeInOut', once: true }}
                     className={s.map__container}
                 >
-                    <motion.img transition={{ duration: 0.5, ease: 'easeInOut' }}  variants={itemMap} className={s.map} src={map} alt="" />
+                    <motion.img transition={{ duration: 0.5, ease: 'easeInOut' }} variants={itemMap} className={s.map} src={map} alt="" />
                     <motion.div transition={{ duration: 1, ease: 'easeInOut' }} variants={item} className={s.place1}>
                         <img className={s.place} src={place} alt="" />
                         <div className={s.text}>

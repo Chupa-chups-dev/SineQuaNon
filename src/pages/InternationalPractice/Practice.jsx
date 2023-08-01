@@ -64,6 +64,7 @@ export default function Practice() {
 
                 className={s.investment}>
                 <div className={s.investment__container}>
+                    <div className={s.BgBlack}></div>
                     <div className={s.Bg}></div>
                     <button onClick={scrollToBottom} className="arrow">
                         <svg
@@ -117,11 +118,11 @@ export default function Practice() {
                                 whileInView="visible"
                                 viewport={{ amount: 0.2, once: true }} className={s.container}>
                                 <motion.div custom={1}
-                                            transition={{
-                                                duration: 0.5, // Время анимации
-                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
-                                            }}
-                                            variants={textAnimation} className={s.card}>
+                                    transition={{
+                                        duration: 0.5,
+                                        ease: 'easeInOut', 
+                                    }}
+                                    variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
                                         <img src={Uae} alt="" />
                                     </div>
@@ -141,11 +142,11 @@ export default function Practice() {
                                     </div>
                                 </motion.div>
                                 <motion.div custom={1}
-                                            transition={{
-                                                duration: 0.5, // Время анимации
-                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
-                                            }}
-                                            variants={textAnimation} className={s.card}>
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
                                         <img src={Kazakhstan} alt="" />
                                     </div>
@@ -163,11 +164,11 @@ export default function Practice() {
                                     </div>
                                 </motion.div>
                                 <motion.div custom={1}
-                                            transition={{
-                                                duration: 0.5, // Время анимации
-                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
-                                            }}
-                                            variants={textAnimation} className={s.card}>
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
                                         <img src={Uzbekistan} alt="" />
                                     </div>
@@ -184,11 +185,11 @@ export default function Practice() {
                                     </div>
                                 </motion.div>
                                 <motion.div custom={2}
-                                            transition={{
-                                                duration: 0.5, // Время анимации
-                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
-                                            }}
-                                            variants={textAnimation} className={s.card}>
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
                                         <img src={Uae} alt="" />
                                     </div>
@@ -207,11 +208,11 @@ export default function Practice() {
                                     </div>
                                 </motion.div>
                                 <motion.div custom={2}
-                                            transition={{
-                                                duration: 0.5, // Время анимации
-                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
-                                            }}
-                                            variants={textAnimation} className={s.card}>
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
                                         <img src={HongKong} alt="" />
                                     </div>
@@ -229,11 +230,11 @@ export default function Practice() {
                                     </div>
                                 </motion.div>
                                 <motion.div custom={2}
-                                            transition={{
-                                                duration: 0.5, // Время анимации
-                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
-                                            }}
-                                            variants={textAnimation} className={s.card}>
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation} className={s.card}>
                                     <div className={s.img__box}>
                                         <img src={Uae} alt="" />
                                     </div>

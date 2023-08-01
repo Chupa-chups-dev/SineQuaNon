@@ -9,7 +9,7 @@ $red: #891515;
     left: 0;
     position: fixed;
     top: 0;
-    z-index: 50;
+    z-index: 5000;
 
     @media screen and (max-width: 768px) {
         height: 60px;
@@ -89,7 +89,7 @@ $red: #891515;
     background: $red;
     height: 100%;
     width: 430px;
-    z-index: 10;
+    z-index: 1000;
 
     @media screen and (max-width: 768px) {
         width: 100%;
