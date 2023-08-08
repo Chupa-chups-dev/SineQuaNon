@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import s from './Team.module.scss'
 import SideBar from '../../components/NavSideBar/SideBar'
 import Footer from '../../components/Footer/Footer'
-import Lawyer from './../../assets/lawyer.png'
+import Lawyer from './../../assets/photo_2021-12-14_12-28-42.jpg'
 
 const textAnimation = {
     hidden: {
@@ -41,42 +41,42 @@ export default function Team() {
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
 
                         </motion.div>
@@ -90,42 +90,42 @@ export default function Team() {
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
                             <div>
                                 <img src={Lawyer} alt="" />
                                 <div></div>
-                                <h3>Alastair Campbell</h3>
+                                <h3>Константин Шакко</h3>
                             </div>
 
                         </div>

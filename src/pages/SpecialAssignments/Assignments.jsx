@@ -6,14 +6,16 @@ import Footer from '../../components/Footer/Footer';
 import SideBar from '../../components/NavSideBar/SideBar';
 const textAnimation = {
     hidden: {
-        rotateY: 90,
+        opacity: 0,
     },
-    visible: custom => ({
-        rotateY: 0,
-        transition: { delay: custom * 0.3 },
-
-    }),
-}
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
+};
 const container = {
     hidden: { opacity: 0 },
     show: {
@@ -94,7 +96,7 @@ export default function Assignments() {
                 <div ref={bottomBlockRef}>
                     <div className={s.information}>
                         <div className='container'>
-                            <h3><span>Особые поручения</span> – персональные решения для наших клиентов по личным, семейным, узкопрофильным вопросам. Доверительно, конфиденциально и профессионально.</h3>
+                            <h3><span>Особые поручения</span> – персональные решения для наших клиентов по личным, узкопрофильным вопросам. Доверительно, конфиденциально и профессионально.</h3>
                         </div>
                     </div>
                     <div className={s.content}>
@@ -108,7 +110,7 @@ export default function Assignments() {
                                         duration: 0.5, // Время анимации
                                         ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
                                     }}
-                                    variants={textAnimation}>Брачные договоры и раздел активов супругов;</motion.li>
+                                    variants={textAnimation}>Брачные договоры, раздел активов супругов, наследственные дела;</motion.li>
                                 <motion.li custom={1}
                                     transition={{
                                         duration: 0.5, // Время анимации
@@ -132,7 +134,13 @@ export default function Assignments() {
                                         duration: 0.5, // Время анимации
                                         ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
                                     }}
-                                    variants={textAnimation}>Приобретение активов в зарубежных юрисдикциях.</motion.li>
+                                    variants={textAnimation}>Приобретение активов в зарубежных юрисдикциях;</motion.li>
+                                <motion.li custom={2}
+                                    transition={{
+                                        duration: 0.5, // Время анимации
+                                        ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
+                                    }}
+                                    variants={textAnimation}>Создание персональных холдинговых структур и трастов.</motion.li>
                             </motion.ul>
                         </div>
                     </div>

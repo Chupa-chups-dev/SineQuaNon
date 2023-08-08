@@ -12,14 +12,16 @@ import HongKong from "../../assets/HongKong.jpg"
 
 const textAnimation = {
     hidden: {
-        rotateY: 90,
+        opacity: 0,
     },
-    visible: custom => ({
-        rotateY: 0,
-        transition: { delay: custom * 0.3 },
-
-    }),
-}
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1, 
+            ease: "easeOut", 
+        },
+    },
+};
 const container = {
     hidden: { opacity: 0 },
     show: {
@@ -127,7 +129,7 @@ export default function Practice() {
                                         <img src={Uae} alt="" />
                                     </div>
                                     <div className={s.content}>
-                                        <h2>ОАЭ</h2>
+                                        <h2 className={s.content__title}>Объединенные Арабские Эмираты</h2>
                                         <h3>ОАЭ является одним из наиболее динамично развивающихся регионов мира, что предоставляет бизнесу множество возможностей для роста и развития.</h3>
                                         <h4>Локализация в ОАЭ:</h4>
                                         <p>Консультации по вопросам законодательства и налогообложения ОАЭ, а также по процедуре регистрации и лицензирования бизнеса;</p>

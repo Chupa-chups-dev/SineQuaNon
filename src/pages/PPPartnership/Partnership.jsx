@@ -7,14 +7,16 @@ import SideBar from '../../components/NavSideBar/SideBar';
 
 const textAnimation = {
     hidden: {
-        rotateY: 90,
+        opacity: 0,
     },
-    visible: custom => ({
-        rotateY: 0,
-        transition: { delay: custom * 0.3 },
-
-    }),
-}
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1, 
+            ease: "easeOut", 
+        },
+    },
+};
 
 const container = {
     hidden: { opacity: 0 },
@@ -106,7 +108,7 @@ export default function Partnership() {
                         <div className={s.category__text1}>
                             <div className="container">
                                 <h3>
-                                    Юристы SQN обладают многолетним опытом сопровождения ГЧП проектов. Основу нашей практики ГЧП составляют проекты в социальной сфере (школы, поликлиники, спортивные сооружения), жилищно-коммунального хозяйства (ТКО, прочие тарифные ЖКХ проекты) и в сфере инфраструктуры (парковки, фото-видео-фиксация, объекты дорожного хозяйства).
+                                    Юристы SQN обладают многолетним опытом сопровождения ГЧП проектов. Основу нашей практики ГЧП составляют проекты в социальной сфере (школы, поликлиники, спортивные сооружения), проекты жилищно-коммунального хозяйства (ТКО, прочие тарифные ЖКХ проекты) и проекты в сфере инфраструктуры (парковки, фото-видео-фиксация, объекты дорожного хозяйства).
                                 </h3>
                             </div>
                         </div>
@@ -118,7 +120,7 @@ export default function Partnership() {
                         <div className={s.category__container}>
                             <div className="container">
                                 <div className={s.category__first}>
-                                    <h5>Юридические слуги по комплексному организационно-правовому сопровождению проектов в сфере ГЧП включают:</h5>
+                                    <h5>Юридические услуги по комплексному организационно-правовому сопровождению проектов в сфере ГЧП включают:</h5>
                                     <motion.ul initial="hidden"
                                         whileInView="visible"
                                         viewport={{ amount: 0.2, once: true }} >
@@ -152,12 +154,7 @@ export default function Partnership() {
                                                 ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
                                             }}
                                             variants={textAnimation}>Подготовка заявок и конкурсных предложений и юридическое сопровождение участия в конкурсных процедурах;</motion.li>
-                                        <motion.li custom={2}
-                                            transition={{
-                                                duration: 0.5, // Время анимации
-                                                ease: 'easeInOut', // Кривая анимации (в данном случае, easeInOut - плавный вход и выход)
-                                            }}
-                                            variants={textAnimation}>Выявление и оценка юридических рисков;</motion.li>
+
                                         <motion.li custom={3}
                                             transition={{
                                                 duration: 0.5, // Время анимации

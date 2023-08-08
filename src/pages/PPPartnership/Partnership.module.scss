@@ -114,7 +114,7 @@ $red: #891515;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: url(../../assets/lawyers.png);
+    background-image: url(../../assets/Partnership.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -233,7 +233,9 @@ $red: #891515;
 
             li {
                 height: 184px;
+                text-align: center;
                 display: flex;
+                justify-content: center;
                 align-items: center;
                 padding: 32px;
                 background-color: rgba(161, 161, 170, 0.2);

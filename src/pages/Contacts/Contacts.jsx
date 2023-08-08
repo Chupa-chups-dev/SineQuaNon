@@ -34,14 +34,7 @@ const item = {
     hidden: { opacity: 0 },
     show: { opacity: 1 }
 }
-const initialValues = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    comment: '',
-    dataProcessingConsent: false,
-};
+
 
 export default function Contacts() {
     const [firstName, setFirstName] = useState('');
@@ -123,29 +116,35 @@ export default function Contacts() {
     const handleInvalidLastName = (event) => {
         event.target.setCustomValidity('Пожалуйста, заполните поле.');
     };
-
-    const [to, setTo] = useState('');
-    const [subject, setSubject] = useState('');
-    const [text, setText] = useState('');
-
+    const resetForm = () => {
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setComment('');
+        setPhoneNumber('');
+        setDataProcessingConsent(false);
+    };
+    const firstEmail = 'mikhas.kroytor1@gmail.com';
+    const subjectText = `Письмо с сайта SineQuaNon`;
+    const messageText = `Вам поступила новая заявка!\n\nИмя: ${firstName}\nФамилия: ${lastName}\nEmail: ${email}\nТелефон: ${phoneNumber}\n\nКомментарий к заявке: ${comment}`;
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios
-            .post('http://localhost:3001/send-email', { to, lastName, firstName, subject, text, phoneNumber, comment, email })
-            .then((response) => {
-                console.log(response.data);
-                setFirstName(initialValues.firstName);
-                setLastName(initialValues.lastName);
-                setEmail(initialValues.email);
-                setComment(initialValues.comment);
-                setPhoneNumber(initialValues.phone);
-                setDataProcessingConsent(initialValues.dataProcessingConsent);
-            })
 
+        axios.post('https://proxy.ctrl.lc:3001/api/v1/email/', {
+            email: firstEmail,
+            subject: subjectText,
+            message: messageText,
+        })
+            .then((response) => {
+                console.log('Success:', response.data);
+                alert('Заявка отправлена. Мы с Вами свяжемся в течение 2-х рабочих дней.');
+                resetForm();
+            })
             .catch((error) => {
-                console.log(error);
+                console.error('Error:', error);
             });
+        resetForm();
     };
 
 
@@ -223,7 +222,7 @@ export default function Contacts() {
                                     <div>2023 © ООО "SineQuaNon"</div>
                                 </motion.div>
                                 <motion.div custom={2} variants={textAnimation} className={s.coordinates__map}>
-                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8b073049f4f5f5e1e631bc819ce518315021a6c05497663bc4df416dd4305c38&amp;source=constructor" width="660" height="400" frameborder="0"></iframe>
+                                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7376a503e126d712876419cae5b108eb7fe30cd7d750e5767cbb685aecb4bdc1&amp;source=constructor" width="660" height="400" frameborder="0"></iframe>
                                 </motion.div>
                             </div>
                         </div>

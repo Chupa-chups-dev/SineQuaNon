@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import s from "./Category.module.scss"
 import { Link } from 'react-router-dom'
-import CorporatePractice from "./../../assets/Corporate_PracticeBg.JPG"
-import Transactions from "./../../assets/TransactionsBg.jpg"
-import Partnership from "./../../assets/Public-privatePartnership.jpg"
+import Partnership from "./../../assets/Partnership.JPG"
+import Transactions from "./../../assets/TransactionsBg.JPG"
+import CorporatePractice from "./../../assets/CorporatePractice.jpg"
 import InternationalPractice from "./../../assets/International_practiceBg.jpg"
 import SpecialAssignments from "./../../assets/SpecialAssignments.WEBP"
 import Contacts from "./../../assets/ContactsBg.jpg"
 
-const categories = [
-    { name: 'Корпоративная Практика', url: '/CorporatePractice' },
-    { name: 'Сделки', url: '/Transactions' },
-    { name: 'ГЧП', url: '/Partnership' },
-    { name: 'Международная практика', url: '/InternationalPractice' },
-    { name: 'Особые поручения', url: '/SpecialAssignments' },
-    { name: 'Команда', url: '/OurTeam' },
-];
 
 const Menu = ({ bottomBlockRef }) => {
     return (

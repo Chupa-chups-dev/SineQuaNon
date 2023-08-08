@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
-import Lawyer from './../../assets/lawyers.avif'
+import Lawyer from './../../assets/photo_2021-12-14_12-28-42.jpg'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -30,49 +30,49 @@ export default function SwiperEmployees() {
             <div className="lawyers">
               <img src={Lawyer} alt="" />
               <div></div>
-              <h3>Alastair Campbell</h3>
+              <h3>Константин Шакко</h3>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="lawyers">
               <img src={Lawyer} alt="" />
               <div></div>
-              <h3>Alastair Campbell</h3>
+              <h3>Константин Шакко</h3>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="lawyers">
               <img src={Lawyer} alt="" />
               <div></div>
-              <h3>Alastair Campbell</h3>
+              <h3>Константин Шакко</h3>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="lawyers">
               <img src={Lawyer} alt="" />
               <div></div>
-              <h3>Alastair Campbell</h3>
+              <h3>Константин Шакко</h3>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="lawyers">
               <img src={Lawyer} alt="" />
               <div></div>
-              <h3>Alastair Campbell</h3>
+              <h3>Константин Шакко</h3>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="lawyers">
               <img src={Lawyer} alt="" />
               <div></div>
-              <h3>Alastair Campbell</h3>
+              <h3>Константин Шакко</h3>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="lawyers">
               <img src={Lawyer} alt="" />
               <div></div>
-              <h3>Alastair Campbell</h3>
+              <h3>Константин Шакко</h3>
             </div>
           </SwiperSlide>
         </Swiper>
